@@ -6,9 +6,18 @@
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
+    "importHelpers": true,
+    "skipLibCheck": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "allowSyntheticDefaultImports": true,
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client", "jest"],
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "suppressImplicitAnyIndexErrors":true,  // 允许下角标为字符串索引
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

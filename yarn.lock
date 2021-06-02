@@ -464,6 +464,44 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@intlify/core-base@9.0.0":
+  version "9.0.0"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fcore-base/-/core-base-9.0.0.tgz#3de223b8532c535d022e5be58f7d56a26d2fb12f"
+  integrity sha1-PeIjuFMsU10CLlvlj31Wom0vsS8=
+  dependencies:
+    "@intlify/message-compiler" "9.0.0"
+    "@intlify/message-resolver" "9.0.0"
+    "@intlify/runtime" "9.0.0"
+    "@intlify/shared" "9.0.0"
+
+"@intlify/message-compiler@9.0.0":
+  version "9.0.0"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fmessage-compiler/-/message-compiler-9.0.0.tgz#8a1079f8aebcde33057ce769817691ce27ad3e0d"
+  integrity sha1-ihB5+K683jMFfOdpgXaRzietPg0=
+  dependencies:
+    "@intlify/message-resolver" "9.0.0"
+    "@intlify/shared" "9.0.0"
+    source-map "0.6.1"
+
+"@intlify/message-resolver@9.0.0":
+  version "9.0.0"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fmessage-resolver/-/message-resolver-9.0.0.tgz#0077ec24606b6486d238bdef9044e27729f4782c"
+  integrity sha1-AHfsJGBrZIbSOL3vkETidyn0eCw=
+
+"@intlify/runtime@9.0.0":
+  version "9.0.0"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fruntime/-/runtime-9.0.0.tgz#bf9415ff90c746a9be38a5c32f71cbbe9848eee8"
+  integrity sha1-v5QV/5DHRqm+OKXDL3HLvphI7ug=
+  dependencies:
+    "@intlify/message-compiler" "9.0.0"
+    "@intlify/message-resolver" "9.0.0"
+    "@intlify/shared" "9.0.0"
+
+"@intlify/shared@9.0.0":
+  version "9.0.0"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fshared/-/shared-9.0.0.tgz#d85b3b5f9033f377c5cf2202cf2459aa49948f36"
+  integrity sha1-2Fs7X5Az83fFzyICzyRZqkmUjzY=
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "http://dev.owler.cn:11803/package/@istanbuljs%2fload-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
@@ -781,7 +819,7 @@
   resolved "http://dev.owler.cn:11803/package/@types%2fjson5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/lodash@^4.14.161":
+"@types/lodash@^4.14.161", "@types/lodash@^4.14.170":
   version "4.14.170"
   resolved "http://dev.owler.cn:11803/package/@types%2flodash/-/lodash-4.14.170.tgz#0d67711d4bf7f4ca5147e9091b847479b87925d6"
   integrity sha1-DWdxHUv39MpRR+kJG4R0ebh5JdY=
@@ -962,7 +1000,7 @@
     "@vue/compiler-dom" "3.0.11"
     "@vue/shared" "3.0.11"
 
-"@vue/devtools-api@^6.0.0-beta.10", "@vue/devtools-api@^6.0.0-beta.11":
+"@vue/devtools-api@^6.0.0-beta.10", "@vue/devtools-api@^6.0.0-beta.11", "@vue/devtools-api@^6.0.0-beta.5":
   version "6.0.0-beta.12"
   resolved "http://dev.owler.cn:11803/package/@vue%2fdevtools-api/-/devtools-api-6.0.0-beta.12.tgz#693ffc77bfb66b080e5c9576abb5786c85470a32"
   integrity sha1-aT/8d7+2awgOXJV2q7V4bIVHCjI=
@@ -5480,15 +5518,15 @@ source-map@0.5.6:
   resolved "http://dev.owler.cn:11803/package/source-map/-/source-map-0.5.6.tgz#75ce38f52bf0733c5a7f0c118d81334a2bb5f412"
   integrity sha1-dc449SvwczxafwwRjYEzSiu19BI=
 
+source-map@0.6.1, source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
+  version "0.6.1"
+  resolved "http://dev.owler.cn:11803/package/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+  integrity sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
+
 source-map@^0.5.0, source-map@^0.5.6:
   version "0.5.7"
   resolved "http://dev.owler.cn:11803/package/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=
-
-source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
-  version "0.6.1"
-  resolved "http://dev.owler.cn:11803/package/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
-  integrity sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
 
 source-map@^0.7.3:
   version "0.7.3"
@@ -6149,6 +6187,15 @@ vue-eslint-parser@^7.6.0:
     espree "^6.2.1"
     esquery "^1.4.0"
     lodash "^4.17.15"
+
+vue-i18n@9.0.0:
+  version "9.0.0"
+  resolved "http://dev.owler.cn:11803/package/vue-i18n/-/vue-i18n-9.0.0.tgz#a04c41d5ed3d5a068e923517bfaa0abcbc84e174"
+  integrity sha1-oExB1e09WgaOkjUXv6oKvLyE4XQ=
+  dependencies:
+    "@intlify/core-base" "9.0.0"
+    "@intlify/shared" "9.0.0"
+    "@vue/devtools-api" "^6.0.0-beta.5"
 
 vue-jest@^5.0.0-alpha.7:
   version "5.0.0-alpha.10"

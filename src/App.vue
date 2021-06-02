@@ -4,13 +4,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent,getCurrentInstance } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
     HelloWorld
+  },
+  setup(){
+    const {proxy}  = getCurrentInstance() as any
+    // console.log(proxy.$_.map([{id:11},{id:22}],'id'))
   }
 })
 </script>
