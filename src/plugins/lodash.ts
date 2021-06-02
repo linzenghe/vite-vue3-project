@@ -5,10 +5,8 @@
  * @Date: 2021-06-02 15:07:51
  */
 
-
-import lodash from 'lodash'
+import lodash from "lodash";
 
 export default function install(app: any) {
-  app.config.globalProperties.$_ = lodash // vue3 通过app.config.globalProperties来挂载 全局方法，全局变量 todo: 不能挂在下划线，故使用$_
-  console.log(app.config.globalProperties)
+  app.config.globalProperties.$_ = lodash; // vue3 通过app.config.globalProperties来挂载 全局方法，全局变量 todo: 不能挂在下划线，故使用$_
 }

@@ -834,6 +834,11 @@
   resolved "http://dev.owler.cn:11803/package/@types%2fnode/-/node-15.6.1.tgz#32d43390d5c62c5b6ec486a9bc9c59544de39a08"
   integrity sha1-MtQzkNXGLFtuxIapvJxZVE3jmgg=
 
+"@types/node@^14.14.11":
+  version "14.17.2"
+  resolved "http://dev.owler.cn:11803/package/@types%2fnode/-/node-14.17.2.tgz#1e94476db57ec93a372c7f7d29aa5707cfb92339"
+  integrity sha1-HpRHbbV+yTo3LH99KapXB8+5Izk=
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
   resolved "http://dev.owler.cn:11803/package/@types%2fnormalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"

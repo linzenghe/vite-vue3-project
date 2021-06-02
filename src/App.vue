@@ -4,19 +4,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent,getCurrentInstance } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent, getCurrentInstance } from "vue";
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    HelloWorld,
   },
-  setup(){
-    const {proxy}  = getCurrentInstance() as any
-    // console.log(proxy.$_.map([{id:11},{id:22}],'id'))
-  }
-})
+  setup() {
+    const { proxy } = getCurrentInstance() as any;
+    console.log(proxy.$_.map([{ id: 11 }, { id: 22 }], "id"));
+  },
+});
 </script>
 
 <style>
