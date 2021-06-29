@@ -1,0 +1,79 @@
+{
+  "id": "1027043",
+  "name": "后台管理系统（element）图标库",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "22129293",
+      "name": "eye",
+      "font_class": "eye",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "22129294",
+      "name": "eye-open",
+      "font_class": "eye-open",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "147105",
+      "name": "红包",
+      "font_class": "tuikuan",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "731963",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "2502391",
+      "name": "商户",
+      "font_class": "shanghu",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "680965",
+      "name": "钻",
+      "font_class": "zuan",
+      "unicode": "e713",
+      "unicode_decimal": 59155
+    },
+    {
+      "icon_id": "4764230",
+      "name": "金币",
+      "font_class": "jinbi",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "4899911",
+      "name": "钢镚",
+      "font_class": "gangbeng",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "376169",
+      "name": "微信支付2",
+      "font_class": "wechatpay",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "854916",
+      "name": "支付宝",
+      "font_class": "alipay",
+      "unicode": "e6cc",
+      "unicode_decimal": 59084
+    }
+  ]
+}

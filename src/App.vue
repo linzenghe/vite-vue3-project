@@ -1,31 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <router-view></router-view>
 </template>
 
 <script lang="ts">
-import { defineComponent, getCurrentInstance } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
-
+import { defineComponent } from "vue";
+import { useStore } from '@/store'
 export default defineComponent({
-  name: "App",
-  components: {
-    HelloWorld,
-  },
-  setup() {
-    const { proxy } = getCurrentInstance() as any;
-    console.log(proxy.$_.map([{ id: 11 }, { id: 22 }], "id"));
-  },
+  setup(){
+    const store = useStore()
+
+  }
 });
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+
 </style>

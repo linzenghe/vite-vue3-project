@@ -99,7 +99,7 @@ module.exports = {
     "new-parens": 2,
     "no-array-constructor": 2,
     "no-caller": 2,
-    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-console": import.meta.env.MODE === "production" ? "error" : "off",
     "no-class-assign": 2,
     "no-cond-assign": 2,
     "no-const-assign": 2,
@@ -257,7 +257,7 @@ module.exports = {
     "yield-star-spacing": [2, "both"],
     yoda: [2, "never"],
     "prefer-const": 2,
-    "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
+    "no-debugger": import.meta.env.MODE === "production" ? 2 : 0,
     "object-curly-spacing": [
       2,
       "always",
