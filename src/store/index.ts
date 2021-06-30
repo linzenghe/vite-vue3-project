@@ -3,26 +3,6 @@
  * @Author: zenghe
  * @Date: 2021-06-04 09:11:25
  */
-// import { createStore } from 'vuex'
-
-// import { store as app, AppStore, AppState } from '@/store/modules/app'
-
-// export interface RootState{
-//   app: AppStore,
-// }
-
-// export type Store = AppStore<Pick<RootState,'app'>>
-
-// export const store = createStore({
-//   modules:{
-//     app
-//   }
-// })
-
-// export function userStore():Store {
-//   return store as Store
-// }
-
 
 import { InjectionKey } from 'vue'
 import {
@@ -31,8 +11,8 @@ import {
 
 import RootStateTypes,{ AllStateTypes } from '@/store/interface'
 // 引入测试子模块
-import userModule from '@/store/modules/user'
-import settingsModule from '@/store/modules/setting'
+import user from '@/store/modules/user'
+import settings from '@/store/modules/setting'
 
 export default createStore<RootStateTypes>({
   plugins:import.meta.env.MODE === 'production'? []: [createLogger()],
@@ -41,8 +21,8 @@ export default createStore<RootStateTypes>({
   mutations:{},
   actions:{},
   modules:{
-    userModule,
-    settingsModule
+    user,
+    settings
   }
 })
 

@@ -38,7 +38,7 @@ export default defineComponent({
     const rightPanel = ref(null)
     const store = useStore()
     const theme = computed(() => {
-      return store.state['settingModule'].state.theme
+      return store.state.settings.theme
     })
 
     watch(show,(value)=>{

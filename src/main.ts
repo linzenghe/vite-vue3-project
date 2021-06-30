@@ -4,7 +4,7 @@ const app = createApp(App)
 import  store, { key } from '@/store'
 import router from './router'
 
-import '@/assets/styles/index.scss' // global css
+import '@/styles/index.scss' // global css
 import '@/assets/iconfont/iconfont.css' // iconfont
 
 // 加载所有插件

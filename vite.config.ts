@@ -29,7 +29,7 @@ export default defineConfig({
   css: {
     preprocessorOptions:{
       scss:{
-        additionalData:'@import "./src/assets/styles/variables.scss";' // 添加全局样式
+        additionalData: '@import "./src/styles/_variables.scss";' // 添加全局样式
       }
     }
   },

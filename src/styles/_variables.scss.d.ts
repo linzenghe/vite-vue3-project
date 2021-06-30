@@ -3,9 +3,10 @@
  * @Author: ZY
  * @Date: 2020-12-21 14:38:13
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-06-27 17:16:40
+ * @LastEditTime: 2021-06-30 10:35:02
  */
 export interface ScssVariables {
+  theme: string;
   menuText: string;
   menuActiveText: string;
   subMenuActiveText: string;
@@ -16,6 +17,6 @@ export interface ScssVariables {
   sideBarWidth: string;
 }
 
-export const variables: IScssVariables
+export const variables: ScssVariables
 
 export default variables

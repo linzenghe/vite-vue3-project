@@ -12,8 +12,8 @@ export default interface RootStateTypes{
 
 // vuex所有state 类型定义集成
 export interface AllStateTypes extends RootStateTypes{
-  UserModule: UserModuleTypes,
-  settingsModule: SettingsState
+  user: UserModuleTypes,
+  settings: SettingsState
 }
 
 

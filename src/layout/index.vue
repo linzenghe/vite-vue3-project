@@ -22,17 +22,31 @@
 
 <script lang="ts">
 
-import {defineComponent} from 'vue'
+import {defineComponent,ref,reactive} from 'vue'
+
+import { AppMain, Navbar, Settings, TagsView, Sidebar } from './components'
 import RightPanel from '@/components/RightPanel/index.vue'
 
 export default defineComponent({
   name:'Layout',
   components:{
-    RightPanel
+    RightPanel,
+    AppMain,
+    Navbar,
+    Settings,
+    TagsView,
+    Sidebar
   },
   setup() {
-    return {
+    const showSettings = ref(true)
+    const needTagsView = ref(false)
+    const fixedHeader = ref(false)
+    const sidebar = ref({})
+    function handleClickOutside(){
 
+    }
+    return {
+      showSettings,needTagsView,fixedHeader,sidebar,handleClickOutside
     }
   }
 })

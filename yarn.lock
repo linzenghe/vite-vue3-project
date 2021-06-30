@@ -16,6 +16,13 @@
   dependencies:
     "@babel/highlight" "^7.12.13"
 
+"@babel/code-frame@^7.10.4", "@babel/code-frame@^7.14.5":
+  version "7.14.5"
+  resolved "http://dev.owler.cn:11803/package/@babel%2fcode-frame/-/code-frame-7.14.5.tgz#23b08d740e83f49c5e59945fbf1b43e80bbf4edb"
+  integrity sha1-I7CNdA6D9JxeWZRfvxtD6Au/Tts=
+  dependencies:
+    "@babel/highlight" "^7.14.5"
+
 "@babel/compat-data@^7.14.4":
   version "7.14.4"
   resolved "http://dev.owler.cn:11803/package/@babel%2fcompat-data/-/compat-data-7.14.4.tgz#45720fe0cecf3fd42019e1d12cc3d27fadc98d58"
@@ -42,6 +49,15 @@
     semver "^6.3.0"
     source-map "^0.5.0"
 
+"@babel/generator@^7.12.1":
+  version "7.14.5"
+  resolved "http://dev.owler.cn:11803/package/@babel%2fgenerator/-/generator-7.14.5.tgz#848d7b9f031caca9d0cd0af01b063f226f52d785"
+  integrity sha1-hI17nwMcrKnQzQrwGwY/Im9S14U=
+  dependencies:
+    "@babel/types" "^7.14.5"
+    jsesc "^2.5.1"
+    source-map "^0.5.0"
+
 "@babel/generator@^7.14.2", "@babel/generator@^7.14.3":
   version "7.14.3"
   resolved "http://dev.owler.cn:11803/package/@babel%2fgenerator/-/generator-7.14.3.tgz#0c2652d91f7bddab7cccc6ba8157e4f40dcedb91"
@@ -61,6 +77,15 @@
     browserslist "^4.16.6"
     semver "^6.3.0"
 
+"@babel/helper-function-name@^7.10.4":
+  version "7.14.5"
+  resolved "http://dev.owler.cn:11803/package/@babel%2fhelper-function-name/-/helper-function-name-7.14.5.tgz#89e2c474972f15d8e233b52ee8c480e2cfcd50c4"
+  integrity sha1-ieLEdJcvFdjiM7Uu6MSA4s/NUMQ=
+  dependencies:
+    "@babel/helper-get-function-arity" "^7.14.5"
+    "@babel/template" "^7.14.5"
+    "@babel/types" "^7.14.5"
+
 "@babel/helper-function-name@^7.14.2":
   version "7.14.2"
   resolved "http://dev.owler.cn:11803/package/@babel%2fhelper-function-name/-/helper-function-name-7.14.2.tgz#397688b590760b6ef7725b5f0860c82427ebaac2"
@@ -76,6 +101,13 @@
   integrity sha1-vGNFHUA6OzCCuX4diz/lvUCR5YM=
   dependencies:
     "@babel/types" "^7.12.13"
+
+"@babel/helper-get-function-arity@^7.14.5":
+  version "7.14.5"
+  resolved "http://dev.owler.cn:11803/package/@babel%2fhelper-get-function-arity/-/helper-get-function-arity-7.14.5.tgz#25fbfa579b0937eee1f3b805ece4ce398c431815"
+  integrity sha1-Jfv6V5sJN+7h87gF7OTOOYxDGBU=
+  dependencies:
+    "@babel/types" "^7.14.5"
 
 "@babel/helper-member-expression-to-functions@^7.13.12":
   version "7.13.12"
@@ -134,12 +166,24 @@
   dependencies:
     "@babel/types" "^7.13.12"
 
+"@babel/helper-split-export-declaration@^7.11.0":
+  version "7.14.5"
+  resolved "http://dev.owler.cn:11803/package/@babel%2fhelper-split-export-declaration/-/helper-split-export-declaration-7.14.5.tgz#22b23a54ef51c2b7605d851930c1976dd0bc693a"
+  integrity sha1-IrI6VO9RwrdgXYUZMMGXbdC8aTo=
+  dependencies:
+    "@babel/types" "^7.14.5"
+
 "@babel/helper-split-export-declaration@^7.12.13":
   version "7.12.13"
   resolved "http://dev.owler.cn:11803/package/@babel%2fhelper-split-export-declaration/-/helper-split-export-declaration-7.12.13.tgz#e9430be00baf3e88b0e13e6f9d4eaf2136372b05"
   integrity sha1-6UML4AuvPoiw4T5vnU6vITY3KwU=
   dependencies:
     "@babel/types" "^7.12.13"
+
+"@babel/helper-validator-identifier@^7.10.4", "@babel/helper-validator-identifier@^7.14.5":
+  version "7.14.5"
+  resolved "http://dev.owler.cn:11803/package/@babel%2fhelper-validator-identifier/-/helper-validator-identifier-7.14.5.tgz#d0f0e277c512e0c938277faa85a3968c9a44c0e8"
+  integrity sha1-0PDid8US4Mk4J3+qhaOWjJpEwOg=
 
 "@babel/helper-validator-identifier@^7.14.0":
   version "7.14.0"
@@ -169,10 +213,29 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@babel/highlight@^7.14.5":
+  version "7.14.5"
+  resolved "http://dev.owler.cn:11803/package/@babel%2fhighlight/-/highlight-7.14.5.tgz#6861a52f03966405001f6aa534a01a24d99e8cd9"
+  integrity sha1-aGGlLwOWZAUAH2qlNKAaJNmejNk=
+  dependencies:
+    "@babel/helper-validator-identifier" "^7.14.5"
+    chalk "^2.0.0"
+    js-tokens "^4.0.0"
+
+"@babel/parser@7.12.3":
+  version "7.12.3"
+  resolved "http://dev.owler.cn:11803/package/@babel%2fparser/-/parser-7.12.3.tgz#a305415ebe7a6c7023b40b5122a0662d928334cd"
+  integrity sha1-owVBXr56bHAjtAtRIqBmLZKDNM0=
+
 "@babel/parser@^7.1.0", "@babel/parser@^7.12.0", "@babel/parser@^7.12.13", "@babel/parser@^7.13.9", "@babel/parser@^7.14.2", "@babel/parser@^7.14.3":
   version "7.14.4"
   resolved "http://dev.owler.cn:11803/package/@babel%2fparser/-/parser-7.14.4.tgz#a5c560d6db6cd8e6ed342368dea8039232cbab18"
   integrity sha1-pcVg1tts2ObtNCNo3qgDkjLLqxg=
+
+"@babel/parser@^7.12.1", "@babel/parser@^7.12.3", "@babel/parser@^7.14.5":
+  version "7.14.7"
+  resolved "http://dev.owler.cn:11803/package/@babel%2fparser/-/parser-7.14.7.tgz#6099720c8839ca865a2637e6c85852ead0bdb595"
+  integrity sha1-YJlyDIg5yoZaJjfmyFhS6tC9tZU=
 
 "@babel/plugin-syntax-async-generators@^7.8.4":
   version "7.8.4"
@@ -277,6 +340,30 @@
     "@babel/parser" "^7.12.13"
     "@babel/types" "^7.12.13"
 
+"@babel/template@^7.12.7", "@babel/template@^7.14.5":
+  version "7.14.5"
+  resolved "http://dev.owler.cn:11803/package/@babel%2ftemplate/-/template-7.14.5.tgz#a9bc9d8b33354ff6e55a9c60d1109200a68974f4"
+  integrity sha1-qbydizM1T/blWpxg0RCSAKaJdPQ=
+  dependencies:
+    "@babel/code-frame" "^7.14.5"
+    "@babel/parser" "^7.14.5"
+    "@babel/types" "^7.14.5"
+
+"@babel/traverse@7.12.1":
+  version "7.12.1"
+  resolved "http://dev.owler.cn:11803/package/@babel%2ftraverse/-/traverse-7.12.1.tgz#941395e0c5cc86d5d3e75caa095d3924526f0c1e"
+  integrity sha1-lBOV4MXMhtXT51yqCV05JFJvDB4=
+  dependencies:
+    "@babel/code-frame" "^7.10.4"
+    "@babel/generator" "^7.12.1"
+    "@babel/helper-function-name" "^7.10.4"
+    "@babel/helper-split-export-declaration" "^7.11.0"
+    "@babel/parser" "^7.12.1"
+    "@babel/types" "^7.12.1"
+    debug "^4.1.0"
+    globals "^11.1.0"
+    lodash "^4.17.19"
+
 "@babel/traverse@^7.1.0", "@babel/traverse@^7.14.0", "@babel/traverse@^7.14.2":
   version "7.14.2"
   resolved "http://dev.owler.cn:11803/package/@babel%2ftraverse/-/traverse-7.14.2.tgz#9201a8d912723a831c2679c7ebbf2fe1416d765b"
@@ -291,12 +378,29 @@
     debug "^4.1.0"
     globals "^11.1.0"
 
+"@babel/types@7.12.1":
+  version "7.12.1"
+  resolved "http://dev.owler.cn:11803/package/@babel%2ftypes/-/types-7.12.1.tgz#e109d9ab99a8de735be287ee3d6a9947a190c4ae"
+  integrity sha1-4QnZq5mo3nNb4ofuPWqZR6GQxK4=
+  dependencies:
+    "@babel/helper-validator-identifier" "^7.10.4"
+    lodash "^4.17.19"
+    to-fast-properties "^2.0.0"
+
 "@babel/types@^7.0.0", "@babel/types@^7.12.0", "@babel/types@^7.12.13", "@babel/types@^7.13.0", "@babel/types@^7.13.12", "@babel/types@^7.14.0", "@babel/types@^7.14.2", "@babel/types@^7.14.4", "@babel/types@^7.3.0", "@babel/types@^7.3.3":
   version "7.14.4"
   resolved "http://dev.owler.cn:11803/package/@babel%2ftypes/-/types-7.14.4.tgz#bfd6980108168593b38b3eb48a24aa026b919bc0"
   integrity sha1-v9aYAQgWhZOziz60iiSqAmuRm8A=
   dependencies:
     "@babel/helper-validator-identifier" "^7.14.0"
+    to-fast-properties "^2.0.0"
+
+"@babel/types@^7.12.1", "@babel/types@^7.14.5":
+  version "7.14.5"
+  resolved "http://dev.owler.cn:11803/package/@babel%2ftypes/-/types-7.14.5.tgz#3bb997ba829a2104cedb20689c4a5b8121d383ff"
+  integrity sha1-O7mXuoKaIQTO2yBonEpbgSHTg/8=
+  dependencies:
+    "@babel/helper-validator-identifier" "^7.14.5"
     to-fast-properties "^2.0.0"
 
 "@bcoe/v8-coverage@^0.2.3":
@@ -474,6 +578,32 @@
     "@intlify/runtime" "9.0.0"
     "@intlify/shared" "9.0.0"
 
+"@intlify/core-base@9.1.6":
+  version "9.1.6"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fcore-base/-/core-base-9.1.6.tgz#887fbeafe37d955bac50318f30ac589839f0d9fb"
+  integrity sha1-iH++r+N9lVusUDGPMKxYmDnw2fs=
+  dependencies:
+    "@intlify/devtools-if" "9.1.6"
+    "@intlify/message-compiler" "9.1.6"
+    "@intlify/message-resolver" "9.1.6"
+    "@intlify/runtime" "9.1.6"
+    "@intlify/shared" "9.1.6"
+    "@intlify/vue-devtools" "9.1.6"
+
+"@intlify/core@^9.0.0-beta.15":
+  version "9.1.6"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fcore/-/core-9.1.6.tgz#02215f4f41fa2838923faf51b9d97d6ce055f0a1"
+  integrity sha1-AiFfT0H6KDiSP69Rudl9bOBV8KE=
+  dependencies:
+    "@intlify/core-base" "9.1.6"
+
+"@intlify/devtools-if@9.1.6":
+  version "9.1.6"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fdevtools-if/-/devtools-if-9.1.6.tgz#739b195e430e24fbf8f864ec8a51e243e3347385"
+  integrity sha1-c5sZXkMOJPv4+GTsilHiQ+M0c4U=
+  dependencies:
+    "@intlify/shared" "9.1.6"
+
 "@intlify/message-compiler@9.0.0":
   version "9.0.0"
   resolved "http://dev.owler.cn:11803/package/@intlify%2fmessage-compiler/-/message-compiler-9.0.0.tgz#8a1079f8aebcde33057ce769817691ce27ad3e0d"
@@ -483,10 +613,24 @@
     "@intlify/shared" "9.0.0"
     source-map "0.6.1"
 
+"@intlify/message-compiler@9.1.6":
+  version "9.1.6"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fmessage-compiler/-/message-compiler-9.1.6.tgz#e3e99165c1e6ecc496211017799ae59e15b05a18"
+  integrity sha1-4+mRZcHm7MSWIRAXeZrlnhWwWhg=
+  dependencies:
+    "@intlify/message-resolver" "9.1.6"
+    "@intlify/shared" "9.1.6"
+    source-map "0.6.1"
+
 "@intlify/message-resolver@9.0.0":
   version "9.0.0"
   resolved "http://dev.owler.cn:11803/package/@intlify%2fmessage-resolver/-/message-resolver-9.0.0.tgz#0077ec24606b6486d238bdef9044e27729f4782c"
   integrity sha1-AHfsJGBrZIbSOL3vkETidyn0eCw=
+
+"@intlify/message-resolver@9.1.6":
+  version "9.1.6"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fmessage-resolver/-/message-resolver-9.1.6.tgz#d7493c9f326d5feb0cd8538a6735b648a91d8f2f"
+  integrity sha1-10k8nzJtX+sM2FOKZzW2SKkdjy8=
 
 "@intlify/runtime@9.0.0":
   version "9.0.0"
@@ -497,10 +641,33 @@
     "@intlify/message-resolver" "9.0.0"
     "@intlify/shared" "9.0.0"
 
+"@intlify/runtime@9.1.6":
+  version "9.1.6"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fruntime/-/runtime-9.1.6.tgz#bf1548d9034c80eef92b06b240cb347effb41f71"
+  integrity sha1-vxVI2QNMgO75KwayQMs0fv+0H3E=
+  dependencies:
+    "@intlify/message-compiler" "9.1.6"
+    "@intlify/message-resolver" "9.1.6"
+    "@intlify/shared" "9.1.6"
+
 "@intlify/shared@9.0.0":
   version "9.0.0"
   resolved "http://dev.owler.cn:11803/package/@intlify%2fshared/-/shared-9.0.0.tgz#d85b3b5f9033f377c5cf2202cf2459aa49948f36"
   integrity sha1-2Fs7X5Az83fFzyICzyRZqkmUjzY=
+
+"@intlify/shared@9.1.6":
+  version "9.1.6"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fshared/-/shared-9.1.6.tgz#d03c9301898d6ddffe2a54c03e7664174fbcdfd9"
+  integrity sha1-0DyTAYmNbd/+KlTAPnZkF0+839k=
+
+"@intlify/vue-devtools@9.1.6":
+  version "9.1.6"
+  resolved "http://dev.owler.cn:11803/package/@intlify%2fvue-devtools/-/vue-devtools-9.1.6.tgz#88faadf203951a2a10107440fa99b58f4637d40d"
+  integrity sha1-iPqt8gOVGioQEHRA+pm1j0Y31A0=
+  dependencies:
+    "@intlify/message-resolver" "9.1.6"
+    "@intlify/runtime" "9.1.6"
+    "@intlify/shared" "9.1.6"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -723,6 +890,74 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@sentry/core@5.30.0":
+  version "5.30.0"
+  resolved "http://dev.owler.cn:11803/package/@sentry%2fcore/-/core-5.30.0.tgz#6b203664f69e75106ee8b5a2fe1d717379b331f3"
+  integrity sha1-ayA2ZPaedRBu6LWi/h1xc3mzMfM=
+  dependencies:
+    "@sentry/hub" "5.30.0"
+    "@sentry/minimal" "5.30.0"
+    "@sentry/types" "5.30.0"
+    "@sentry/utils" "5.30.0"
+    tslib "^1.9.3"
+
+"@sentry/hub@5.30.0":
+  version "5.30.0"
+  resolved "http://dev.owler.cn:11803/package/@sentry%2fhub/-/hub-5.30.0.tgz#2453be9b9cb903404366e198bd30c7ca74cdc100"
+  integrity sha1-JFO+m5y5A0BDZuGYvTDHynTNwQA=
+  dependencies:
+    "@sentry/types" "5.30.0"
+    "@sentry/utils" "5.30.0"
+    tslib "^1.9.3"
+
+"@sentry/minimal@5.30.0":
+  version "5.30.0"
+  resolved "http://dev.owler.cn:11803/package/@sentry%2fminimal/-/minimal-5.30.0.tgz#ce3d3a6a273428e0084adcb800bc12e72d34637b"
+  integrity sha1-zj06aic0KOAISty4ALwS5y00Y3s=
+  dependencies:
+    "@sentry/hub" "5.30.0"
+    "@sentry/types" "5.30.0"
+    tslib "^1.9.3"
+
+"@sentry/node@^5.30.0":
+  version "5.30.0"
+  resolved "http://dev.owler.cn:11803/package/@sentry%2fnode/-/node-5.30.0.tgz#4ca479e799b1021285d7fe12ac0858951c11cd48"
+  integrity sha1-TKR555mxAhKF1/4SrAhYlRwRzUg=
+  dependencies:
+    "@sentry/core" "5.30.0"
+    "@sentry/hub" "5.30.0"
+    "@sentry/tracing" "5.30.0"
+    "@sentry/types" "5.30.0"
+    "@sentry/utils" "5.30.0"
+    cookie "^0.4.1"
+    https-proxy-agent "^5.0.0"
+    lru_map "^0.3.3"
+    tslib "^1.9.3"
+
+"@sentry/tracing@5.30.0":
+  version "5.30.0"
+  resolved "http://dev.owler.cn:11803/package/@sentry%2ftracing/-/tracing-5.30.0.tgz#501d21f00c3f3be7f7635d8710da70d9419d4e1f"
+  integrity sha1-UB0h8Aw/O+f3Y12HENpw2UGdTh8=
+  dependencies:
+    "@sentry/hub" "5.30.0"
+    "@sentry/minimal" "5.30.0"
+    "@sentry/types" "5.30.0"
+    "@sentry/utils" "5.30.0"
+    tslib "^1.9.3"
+
+"@sentry/types@5.30.0":
+  version "5.30.0"
+  resolved "http://dev.owler.cn:11803/package/@sentry%2ftypes/-/types-5.30.0.tgz#19709bbe12a1a0115bc790b8942917da5636f402"
+  integrity sha1-GXCbvhKhoBFbx5C4lCkX2lY29AI=
+
+"@sentry/utils@5.30.0":
+  version "5.30.0"
+  resolved "http://dev.owler.cn:11803/package/@sentry%2futils/-/utils-5.30.0.tgz#9a5bd7ccff85ccfe7856d493bffa64cabc41e980"
+  integrity sha1-mlvXzP+FzP54VtSTv/pkyrxB6YA=
+  dependencies:
+    "@sentry/types" "5.30.0"
+    tslib "^1.9.3"
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
   resolved "http://dev.owler.cn:11803/package/@sinonjs%2fcommons/-/commons-1.8.3.tgz#3802ddd21a50a949b6721ddd72da36e67e7f1b2d"
@@ -775,6 +1010,11 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/braces@*":
+  version "3.0.0"
+  resolved "http://dev.owler.cn:11803/package/@types%2fbraces/-/braces-3.0.0.tgz#7da1c0d44ff1c7eb660a36ec078ea61ba7eb42cb"
+  integrity sha1-faHA1E/xx+tmCjbsB46mG6frQss=
+
 "@types/graceful-fs@^4.1.2":
   version "4.1.5"
   resolved "http://dev.owler.cn:11803/package/@types%2fgraceful-fs/-/graceful-fs-4.1.5.tgz#21ffba0d98da4350db64891f92a9e5db3cdb4e15"
@@ -823,6 +1063,13 @@
   version "4.14.170"
   resolved "http://dev.owler.cn:11803/package/@types%2flodash/-/lodash-4.14.170.tgz#0d67711d4bf7f4ca5147e9091b847479b87925d6"
   integrity sha1-DWdxHUv39MpRR+kJG4R0ebh5JdY=
+
+"@types/micromatch@^4.0.1":
+  version "4.0.1"
+  resolved "http://dev.owler.cn:11803/package/@types%2fmicromatch/-/micromatch-4.0.1.tgz#9381449dd659fc3823fd2a4190ceacc985083bc7"
+  integrity sha1-k4FEndZZ/Dgj/SpBkM6syYUIO8c=
+  dependencies:
+    "@types/braces" "*"
 
 "@types/minimist@^1.2.0":
   version "1.2.1"
@@ -972,6 +1219,17 @@
     estree-walker "^2.0.1"
     source-map "^0.6.1"
 
+"@vue/compiler-core@^3.0.0", "@vue/compiler-core@^3.0.1", "@vue/compiler-core@^3.0.2":
+  version "3.1.2"
+  resolved "http://dev.owler.cn:11803/package/@vue%2fcompiler-core/-/compiler-core-3.1.2.tgz#31ab1d88e1706a5c7a545faeeb64c31bd0101db0"
+  integrity sha1-MasdiOFwalx6VF+u62TDG9AQHbA=
+  dependencies:
+    "@babel/parser" "^7.12.0"
+    "@babel/types" "^7.12.0"
+    "@vue/shared" "3.1.2"
+    estree-walker "^2.0.1"
+    source-map "^0.6.1"
+
 "@vue/compiler-dom@3.0.11":
   version "3.0.11"
   resolved "http://dev.owler.cn:11803/package/@vue%2fcompiler-dom/-/compiler-dom-3.0.11.tgz#b15fc1c909371fd671746020ba55b5dab4a730ee"
@@ -1044,10 +1302,109 @@
   resolved "http://dev.owler.cn:11803/package/@vue%2fshared/-/shared-3.0.11.tgz#20d22dd0da7d358bb21c17f9bde8628152642c77"
   integrity sha1-INIt0Np9NYuyHBf5vehigVJkLHc=
 
+"@vue/shared@3.1.2":
+  version "3.1.2"
+  resolved "http://dev.owler.cn:11803/package/@vue%2fshared/-/shared-3.1.2.tgz#1069c0bc7d6f4bd15ccf3a5f3be29450aca368f9"
+  integrity sha1-EGnAvH1vS9FczzpfO+KUUKyjaPk=
+
 "@vue/test-utils@^2.0.0-rc.4":
   version "2.0.0-rc.6"
   resolved "http://dev.owler.cn:11803/package/@vue%2ftest-utils/-/test-utils-2.0.0-rc.6.tgz#d0aac24d20450d379e183f70542c0822670b8783"
   integrity sha1-0KrCTSBFDTeeGD9wVCwIImcLh4M=
+
+"@vuedx/analyze@0.7.4":
+  version "0.7.4"
+  resolved "http://dev.owler.cn:11803/package/@vuedx%2fanalyze/-/analyze-0.7.4.tgz#cf46c5c31efbd026cba01efd44887693f8e4fe8e"
+  integrity sha1-z0bFwx770CbLoB79RIh2k/jk/o4=
+  dependencies:
+    "@babel/code-frame" "^7.10.4"
+    "@babel/generator" "^7.12.1"
+    "@babel/parser" "^7.12.3"
+    "@babel/template" "^7.12.7"
+    "@babel/traverse" "7.12.1"
+    "@babel/types" "7.12.1"
+    "@types/micromatch" "^4.0.1"
+    "@vuedx/compiler-sfc" "0.7.1"
+    "@vuedx/compiler-tsx" "0.7.4"
+    "@vuedx/projectconfig" "0.7.1"
+    "@vuedx/shared" "0.7.3"
+    "@vuedx/template-ast-types" "0.7.2"
+    cli-highlight "^2.1.4"
+    commander "^6.1.0"
+    fast-glob "^3.2.4"
+    hash-sum "^2.0.0"
+    micromatch "^4.0.2"
+
+"@vuedx/compiler-sfc@0.7.1":
+  version "0.7.1"
+  resolved "http://dev.owler.cn:11803/package/@vuedx%2fcompiler-sfc/-/compiler-sfc-0.7.1.tgz#4889b7c6d7cd0f9cee2708a44253ca25e0b0c71d"
+  integrity sha1-SIm3xtfND5zuJwikQlPKJeCwxx0=
+  dependencies:
+    "@vue/compiler-core" "^3.0.2"
+    lru-cache "^6.0.0"
+    source-map "^0.6.1"
+
+"@vuedx/compiler-tsx@0.7.4":
+  version "0.7.4"
+  resolved "http://dev.owler.cn:11803/package/@vuedx%2fcompiler-tsx/-/compiler-tsx-0.7.4.tgz#f29767269c73a8b300f413771578abd271f79cfd"
+  integrity sha1-8pdnJpxzqLMA9BN3FXir0nH3nP0=
+  dependencies:
+    "@babel/parser" "7.12.3"
+    "@babel/types" "7.12.1"
+    "@vue/compiler-core" "^3.0.1"
+    "@vuedx/shared" "0.7.3"
+    "@vuedx/template-ast-types" "0.7.2"
+
+"@vuedx/projectconfig@0.7.1":
+  version "0.7.1"
+  resolved "http://dev.owler.cn:11803/package/@vuedx%2fprojectconfig/-/projectconfig-0.7.1.tgz#791e6f37939196e5d447d6220cc257a18236afd7"
+  integrity sha1-eR5vN5ORluXUR9YiDMJXoYI2r9c=
+
+"@vuedx/shared@0.7.3":
+  version "0.7.3"
+  resolved "http://dev.owler.cn:11803/package/@vuedx%2fshared/-/shared-0.7.3.tgz#41354d7d9008ae0730da4a9d13827f47acb7a7b2"
+  integrity sha1-QTVNfZAIrgcw2kqdE4J/R6y3p7I=
+  dependencies:
+    "@sentry/node" "^5.30.0"
+    node-unique-machine-id "^1.1.0"
+
+"@vuedx/template-ast-types@0.7.2":
+  version "0.7.2"
+  resolved "http://dev.owler.cn:11803/package/@vuedx%2ftemplate-ast-types/-/template-ast-types-0.7.2.tgz#7e564fff0ff4ff9c17694237500c249334d7c23f"
+  integrity sha1-flZP/w/0/5wXaUI3UAwkkzTXwj8=
+  dependencies:
+    "@vue/compiler-core" "^3.0.0"
+
+"@vuedx/typescript-plugin-vue@^0.7.4":
+  version "0.7.4"
+  resolved "http://dev.owler.cn:11803/package/@vuedx%2ftypescript-plugin-vue/-/typescript-plugin-vue-0.7.4.tgz#9953251a26ea6f99f6a77c00848072654b4b2038"
+  integrity sha1-mVMlGibqb5n2p3wAhIByZUtLIDg=
+  dependencies:
+    "@intlify/core" "^9.0.0-beta.15"
+    "@vuedx/analyze" "0.7.4"
+    "@vuedx/compiler-sfc" "0.7.1"
+    "@vuedx/projectconfig" "0.7.1"
+    "@vuedx/shared" "0.7.3"
+    "@vuedx/template-ast-types" "0.7.2"
+    "@vuedx/vue-virtual-textdocument" "0.7.4"
+    de-indent "^1.0.2"
+    json5 "^2.1.3"
+    quick-lru "^5.1.1"
+    vscode-uri "^2.1.2"
+    vscode-web-custom-data "^0.3.2"
+
+"@vuedx/vue-virtual-textdocument@0.7.4":
+  version "0.7.4"
+  resolved "http://dev.owler.cn:11803/package/@vuedx%2fvue-virtual-textdocument/-/vue-virtual-textdocument-0.7.4.tgz#cc8c2eb902e12653e3bc1599c9c9e6fe92d5ad8b"
+  integrity sha1-zIwuuQLhJlPjvBWZycnm/pLVrYs=
+  dependencies:
+    "@vuedx/analyze" "0.7.4"
+    "@vuedx/compiler-sfc" "0.7.1"
+    "@vuedx/compiler-tsx" "0.7.4"
+    "@vuedx/shared" "0.7.3"
+    source-map "^0.6.1"
+    vscode-languageserver-textdocument "^1.0.1"
+    vscode-uri "^2.1.2"
 
 JSONStream@^1.0.4:
   version "1.3.5"
@@ -1170,6 +1527,11 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   integrity sha1-7dgDYornHATIWuegkG7a00tkiTc=
   dependencies:
     color-convert "^2.0.1"
+
+any-promise@^1.0.0:
+  version "1.3.0"
+  resolved "http://dev.owler.cn:11803/package/any-promise/-/any-promise-1.3.0.tgz#abc6afeedcea52e809cdc0376aed3ce39635d17f"
+  integrity sha1-q8av7tzqUugJzcA3au0845Y10X8=
 
 anymatch@^2.0.0:
   version "2.0.0"
@@ -1668,6 +2030,18 @@ cli-cursor@^3.1.0:
   dependencies:
     restore-cursor "^3.1.0"
 
+cli-highlight@^2.1.4:
+  version "2.1.11"
+  resolved "http://dev.owler.cn:11803/package/cli-highlight/-/cli-highlight-2.1.11.tgz#49736fa452f0aaf4fae580e30acb26828d2dc1bf"
+  integrity sha1-SXNvpFLwqvT65YDjCssmgo0twb8=
+  dependencies:
+    chalk "^4.0.0"
+    highlight.js "^10.7.1"
+    mz "^2.4.0"
+    parse5 "^5.1.1"
+    parse5-htmlparser2-tree-adapter "^6.0.0"
+    yargs "^16.0.0"
+
 cli-truncate@^2.1.0:
   version "2.1.0"
   resolved "http://dev.owler.cn:11803/package/cli-truncate/-/cli-truncate-2.1.0.tgz#c39e28bf05edcde5be3b98992a22deed5a2b93c7"
@@ -1762,7 +2136,7 @@ combined-stream@^1.0.8:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^6.2.0:
+commander@^6.1.0, commander@^6.2.0:
   version "6.2.1"
   resolved "http://dev.owler.cn:11803/package/commander/-/commander-6.2.1.tgz#0792eb682dfbc325999bb2b84fddddba110ac73c"
   integrity sha1-B5LraC37wyWZm7K4T93duhEKxzw=
@@ -1867,6 +2241,11 @@ convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   integrity sha1-F6LLiC1/d9NJBYXizmxSRCSjpEI=
   dependencies:
     safe-buffer "~5.1.1"
+
+cookie@^0.4.1:
+  version "0.4.1"
+  resolved "http://dev.owler.cn:11803/package/cookie/-/cookie-0.4.1.tgz#afd713fe26ebd21ba95ceb61f9a8116e50a537d1"
+  integrity sha1-r9cT/ibr0hupXOth+agRblClN9E=
 
 copy-descriptor@^0.1.0:
   version "0.1.1"
@@ -2011,6 +2390,11 @@ dayjs@1.x:
   version "1.10.5"
   resolved "http://dev.owler.cn:11803/package/dayjs/-/dayjs-1.10.5.tgz#5600df4548fc2453b3f163ebb2abbe965ccfb986"
   integrity sha1-VgDfRUj8JFOz8WPrsqu+llzPuYY=
+
+de-indent@^1.0.2:
+  version "1.0.2"
+  resolved "http://dev.owler.cn:11803/package/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
+  integrity sha1-sgOOhG3DO6pXlhKNCAS0VbjB4h0=
 
 debug@4, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0, debug@^4.3.1:
   version "4.3.1"
@@ -2673,6 +3057,17 @@ fast-glob@^3.1.1:
     micromatch "^4.0.2"
     picomatch "^2.2.1"
 
+fast-glob@^3.2.4:
+  version "3.2.6"
+  resolved "http://dev.owler.cn:11803/package/fast-glob/-/fast-glob-3.2.6.tgz#434dd9529845176ea049acc9343e8282765c6e1a"
+  integrity sha1-Q03ZUphFF26gSazJND6CgnZcbho=
+  dependencies:
+    "@nodelib/fs.stat" "^2.0.2"
+    "@nodelib/fs.walk" "^1.2.3"
+    glob-parent "^5.1.2"
+    merge2 "^1.3.0"
+    micromatch "^4.0.4"
+
 fast-json-stable-stringify@2.x, fast-json-stable-stringify@^2.0.0:
   version "2.1.0"
   resolved "http://dev.owler.cn:11803/package/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz#874bf69c6f404c2b5d99c481341399fd55892633"
@@ -2935,7 +3330,7 @@ git-raw-commits@^2.0.0:
     split2 "^3.0.0"
     through2 "^4.0.0"
 
-glob-parent@^5.0.0, glob-parent@^5.1.0, glob-parent@~5.1.0:
+glob-parent@^5.0.0, glob-parent@^5.1.0, glob-parent@^5.1.2, glob-parent@~5.1.0:
   version "5.1.2"
   resolved "http://dev.owler.cn:11803/package/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
   integrity sha1-hpgyxYA0/mikCTwX3BXoNA2EAcQ=
@@ -3116,6 +3511,11 @@ header-case@^2.0.4:
   dependencies:
     capital-case "^1.0.4"
     tslib "^2.0.3"
+
+highlight.js@^10.7.1:
+  version "10.7.3"
+  resolved "http://dev.owler.cn:11803/package/highlight.js/-/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
+  integrity sha1-aXJy45kTVuQMPKxWanTu9oF1ZTE=
 
 homedir-polyfill@^1.0.1:
   version "1.0.3"
@@ -4038,7 +4438,7 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "http://dev.owler.cn:11803/package/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
 
-json5@2.x, json5@^2.1.2:
+json5@2.x, json5@^2.1.2, json5@^2.1.3:
   version "2.2.0"
   resolved "http://dev.owler.cn:11803/package/json5/-/json5-2.2.0.tgz#2dfefe720c6ba525d9ebd909950f0515316c89a3"
   integrity sha1-Lf7+cgxrpSXZ69kJlQ8FFTFsiaM=
@@ -4282,6 +4682,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+lru_map@^0.3.3:
+  version "0.3.3"
+  resolved "http://dev.owler.cn:11803/package/lru_map/-/lru_map-0.3.3.tgz#b5c8351b9464cbd750335a79650a0ec0e56118dd"
+  integrity sha1-tcg1G5Rky9dQM1p5ZQoOwOVhGN0=
+
 magic-string@^0.25.7:
   version "0.25.7"
   resolved "http://dev.owler.cn:11803/package/magic-string/-/magic-string-0.25.7.tgz#3f497d6fd34c669c6798dcb821f2ef31f5445051"
@@ -4388,7 +4793,7 @@ micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
-micromatch@^4.0.2:
+micromatch@^4.0.2, micromatch@^4.0.4:
   version "4.0.4"
   resolved "http://dev.owler.cn:11803/package/micromatch/-/micromatch-4.0.4.tgz#896d519dfe9db25fce94ceb7a500919bf881ebf9"
   integrity sha1-iW1Rnf6dsl/OlM63pQCRm/iB6/k=
@@ -4489,6 +4894,15 @@ mute-stream@0.0.7:
   resolved "http://dev.owler.cn:11803/package/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
   integrity sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
 
+mz@^2.4.0:
+  version "2.7.0"
+  resolved "http://dev.owler.cn:11803/package/mz/-/mz-2.7.0.tgz#95008057a56cafadc2bc63dde7f9ff6955948e32"
+  integrity sha1-lQCAV6Vsr63CvGPd5/n/aVWUjjI=
+  dependencies:
+    any-promise "^1.0.0"
+    object-assign "^4.0.1"
+    thenify-all "^1.0.0"
+
 nanoid@^3.1.23:
   version "3.1.23"
   resolved "http://dev.owler.cn:11803/package/nanoid/-/nanoid-3.1.23.tgz#f744086ce7c2bc47ee0a8472574d5c78e4183a81"
@@ -4556,6 +4970,13 @@ node-releases@^1.1.71:
   resolved "http://dev.owler.cn:11803/package/node-releases/-/node-releases-1.1.72.tgz#14802ab6b1039a79a0c7d662b610a5bbd76eacbe"
   integrity sha1-FIAqtrEDmnmgx9ZithClu9durL4=
 
+node-unique-machine-id@^1.1.0:
+  version "1.1.0"
+  resolved "http://dev.owler.cn:11803/package/node-unique-machine-id/-/node-unique-machine-id-1.1.0.tgz#dbd9351da927cfc0e85a663a55e8644da384b746"
+  integrity sha1-29k1Haknz8DoWmY6VehkTaOEt0Y=
+  dependencies:
+    uuid "^3.3.3"
+
 normalize-package-data@^2.3.2, normalize-package-data@^2.5.0:
   version "2.5.0"
   resolved "http://dev.owler.cn:11803/package/normalize-package-data/-/normalize-package-data-2.5.0.tgz#e66db1838b200c1dfc233225d12cb36520e234a8"
@@ -4611,6 +5032,11 @@ nwsapi@^2.2.0:
   version "2.2.0"
   resolved "http://dev.owler.cn:11803/package/nwsapi/-/nwsapi-2.2.0.tgz#204879a9e3d068ff2a55139c2c772780681a38b7"
   integrity sha1-IEh5qePQaP8qVROcLHcngGgaOLc=
+
+object-assign@^4.0.1:
+  version "4.1.1"
+  resolved "http://dev.owler.cn:11803/package/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+  integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
 object-copy@^0.1.0:
   version "0.1.0"
@@ -4835,10 +5261,22 @@ parse-passwd@^1.0.0:
   resolved "http://dev.owler.cn:11803/package/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
   integrity sha1-bVuTSkVpk7I9N/QKOC1vFmao5cY=
 
-parse5@6.0.1:
+parse5-htmlparser2-tree-adapter@^6.0.0:
+  version "6.0.1"
+  resolved "http://dev.owler.cn:11803/package/parse5-htmlparser2-tree-adapter/-/parse5-htmlparser2-tree-adapter-6.0.1.tgz#2cdf9ad823321140370d4dbf5d3e92c7c8ddc6e6"
+  integrity sha1-LN+a2CMyEUA3DU2/XT6Sx8jdxuY=
+  dependencies:
+    parse5 "^6.0.1"
+
+parse5@6.0.1, parse5@^6.0.1:
   version "6.0.1"
   resolved "http://dev.owler.cn:11803/package/parse5/-/parse5-6.0.1.tgz#e1a1c085c569b3dc08321184f19a39cc27f7c30b"
   integrity sha1-4aHAhcVps9wIMhGE8Zo5zCf3wws=
+
+parse5@^5.1.1:
+  version "5.1.1"
+  resolved "http://dev.owler.cn:11803/package/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha1-9o5OW6GFKsLK3AD0VV//bCq7YXg=
 
 pascal-case@^3.1.2:
   version "3.1.2"
@@ -5106,6 +5544,11 @@ quick-lru@^4.0.1:
   version "4.0.1"
   resolved "http://dev.owler.cn:11803/package/quick-lru/-/quick-lru-4.0.1.tgz#5b8878f113a58217848c6482026c73e1ba57727f"
   integrity sha1-W4h48ROlgheEjGSCAmxz4bpXcn8=
+
+quick-lru@^5.1.1:
+  version "5.1.1"
+  resolved "http://dev.owler.cn:11803/package/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
+  integrity sha1-NmST5rPkKjpoheLpnRj4D7eoyTI=
 
 react-is@^17.0.1:
   version "17.0.2"
@@ -5916,6 +6359,20 @@ text-table@^0.2.0:
   resolved "http://dev.owler.cn:11803/package/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
+thenify-all@^1.0.0:
+  version "1.6.0"
+  resolved "http://dev.owler.cn:11803/package/thenify-all/-/thenify-all-1.6.0.tgz#1a1918d402d8fc3f98fbf234db0bcc8cc10e9726"
+  integrity sha1-GhkY1ALY/D+Y+/I02wvMjMEOlyY=
+  dependencies:
+    thenify ">= 3.1.0 < 4"
+
+"thenify@>= 3.1.0 < 4":
+  version "3.3.1"
+  resolved "http://dev.owler.cn:11803/package/thenify/-/thenify-3.3.1.tgz#8932e686a4066038a016dd9e2ca46add9838a95f"
+  integrity sha1-iTLmhqQGYDigFt2eLKRq3Zg4qV8=
+  dependencies:
+    any-promise "^1.0.0"
+
 throat@^5.0.0:
   version "5.0.0"
   resolved "http://dev.owler.cn:11803/package/throat/-/throat-5.0.0.tgz#c5199235803aad18754a667d659b5e72ce16764b"
@@ -6054,7 +6511,7 @@ tsconfig@^7.0.0:
     strip-bom "^3.0.0"
     strip-json-comments "^2.0.0"
 
-tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
   version "1.14.1"
   resolved "http://dev.owler.cn:11803/package/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
@@ -6224,6 +6681,11 @@ util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   resolved "http://dev.owler.cn:11803/package/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
+uuid@^3.3.3:
+  version "3.4.0"
+  resolved "http://dev.owler.cn:11803/package/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
+  integrity sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4=
+
 uuid@^8.3.0:
   version "8.3.2"
   resolved "http://dev.owler.cn:11803/package/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
@@ -6273,6 +6735,21 @@ vite@^2.3.5:
     rollup "^2.38.5"
   optionalDependencies:
     fsevents "~2.3.1"
+
+vscode-languageserver-textdocument@^1.0.1:
+  version "1.0.1"
+  resolved "http://dev.owler.cn:11803/package/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.1.tgz#178168e87efad6171b372add1dea34f53e5d330f"
+  integrity sha1-F4Fo6H761hcbNyrdHeo09T5dMw8=
+
+vscode-uri@^2.1.2:
+  version "2.1.2"
+  resolved "http://dev.owler.cn:11803/package/vscode-uri/-/vscode-uri-2.1.2.tgz#c8d40de93eb57af31f3c715dd650e2ca2c096f1c"
+  integrity sha1-yNQN6T61evMfPHFd1lDiyiwJbxw=
+
+vscode-web-custom-data@^0.3.2:
+  version "0.3.4"
+  resolved "http://dev.owler.cn:11803/package/vscode-web-custom-data/-/vscode-web-custom-data-0.3.4.tgz#2344dccd6459725fdb92efc6b7b8cb62d67ea265"
+  integrity sha1-I0TczWRZcl/bku/Gt7jLYtZ+omU=
 
 vue-eslint-parser@^7.6.0:
   version "7.6.0"
@@ -6527,7 +7004,7 @@ yargs@^15.4.1:
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
 
-yargs@^16.2.0:
+yargs@^16.0.0, yargs@^16.2.0:
   version "16.2.0"
   resolved "http://dev.owler.cn:11803/package/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
   integrity sha1-HIK/D2tqZur85+8w43b0mhJHf2Y=
