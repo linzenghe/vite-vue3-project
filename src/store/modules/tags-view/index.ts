@@ -11,10 +11,10 @@ import { mutations } from './mutations'
 import { actions } from './actions'
 
 
-import {SettingsState, state} from './state'
+import {TagsViewState, state} from './state'
 
 
-const settingsModule:Module<SettingsState,RootStateTypes>={
+const settingsModule:Module<TagsViewState,RootStateTypes>={
   namespaced: import.meta.env.MODE !=='production',
   state,
   mutations,

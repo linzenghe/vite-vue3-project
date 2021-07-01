@@ -6,14 +6,22 @@
 import { ActionTree, ActionContext } from 'vuex'
 
 
-import { Mutations, SettingsMutationTypes } from './mutations'
+import { Mutations, TagsMutationTypes } from './mutations'
 import RootStateTypes from '@/store/interface'
-import { SettingsState } from './state'
+import { TagsViewState ,TagView} from './state'
 
 
 // action
-export enum SettingsActionTypes {
-  ACTION_CHANGE_SETTING = 'ACTION_CHANGE_SETTING',
+export enum TagsActionTypes {
+  ACTION_ADD_VIEW = 'ACTION_ADD_VIEW',
+  ACTION_ADD_VISITED_VIEW = 'ACTION_ADD_VISITED_VIEW',
+  ACTION_DEL_VIEW = 'ACTION_DEL_VIEW',
+  ACTION_DEL_OTHER_VIEW = 'ACTION_DEL_OTHER_VIEW',
+  ACTION_DEL_CACHED_VIEW = 'ACTION_DEL_CACHED_VIEW',
+  ACTION_OTHER_VIEWS = 'ACTION_OTHER_VIEWS',
+  ACTION_DEL_ALL_VIEWS = 'ACTION_DEL_ALL_VIEWS',
+  ACTION_DEL_ALL_CACHED_VIEWS = 'ACTION_DEL_ALL_CACHED_VIEWS',
+  ACTION_UPDATE_VISITED_VIEW = 'ACTION_UPDATE_VISITED_VIEW',
 }
 
 type AugmentedActionContext = {
@@ -21,21 +29,82 @@ type AugmentedActionContext = {
     key: K,
     payload: Parameters<Mutations[K]>[1], // Parameters 获取参数类型
   ): ReturnType<Mutations[K]>
-} & Omit<ActionContext<SettingsState, RootStateTypes>, 'commit'>
+} & Omit<ActionContext<TagsViewState, RootStateTypes>, 'commit'>
 
+type NoAugmentedActionContext = {
+  commit<K extends keyof Mutations>(
+    key: K,
+  ): ReturnType<Mutations[K]>
+} & Omit<ActionContext<TagsViewState, RootStateTypes>, 'commit'>
 
 export interface Actions {
-  [SettingsActionTypes.ACTION_CHANGE_SETTING](
+  [TagsActionTypes.ACTION_ADD_VIEW](
     { commit }: AugmentedActionContext,
-    payload: {key: string, value: any}
+    view: TagView
+  ): void
+  [TagsActionTypes.ACTION_ADD_VISITED_VIEW](
+    { commit }: AugmentedActionContext,
+    view: TagView
+  ): void
+  [TagsActionTypes.ACTION_DEL_VIEW](
+    { commit }: AugmentedActionContext,
+    view: TagView
+  ): void
+  [TagsActionTypes.ACTION_DEL_OTHER_VIEW](
+    { commit }: AugmentedActionContext,
+    view: TagView
+  ): void
+  [TagsActionTypes.ACTION_DEL_CACHED_VIEW](
+    { commit }: AugmentedActionContext,
+    view: TagView
+  ): void
+  [TagsActionTypes.ACTION_OTHER_VIEWS](
+    { commit }: AugmentedActionContext,
+    view: TagView
+  ): void
+  [TagsActionTypes.ACTION_DEL_ALL_VIEWS](
+    { commit }: NoAugmentedActionContext
+  ): void
+  [TagsActionTypes.ACTION_DEL_ALL_CACHED_VIEWS](
+    { commit }: NoAugmentedActionContext,
+  ): void
+  [TagsActionTypes.ACTION_UPDATE_VISITED_VIEW](
+    { commit }: AugmentedActionContext,
+    view: TagView
   ): void
 }
 
-export const actions:ActionTree<SettingsState,RootStateTypes> & Actions = {
-  [SettingsActionTypes.ACTION_CHANGE_SETTING](
-    {commit}:AugmentedActionContext,
-    payload:{key:string,value:any}
-  ){
-    commit(SettingsMutationTypes.CHANGE_SETTING, payload)
+export const actions:ActionTree<TagsViewState,RootStateTypes> & Actions = {
+  async [TagsActionTypes.ACTION_ADD_VIEW]({ commit }, view: TagView) {
+    commit(TagsMutationTypes.ADD_VISITED_VIEW, view)
+    commit(TagsMutationTypes.ADD_CACHED_VIEW, view)
+  },
+  [TagsActionTypes.ACTION_ADD_VISITED_VIEW]({ commit }, view: TagView) {
+    commit(TagsMutationTypes.ADD_VISITED_VIEW, view)
+  },
+  [TagsActionTypes.ACTION_DEL_VIEW]({ commit }, view: TagView) {
+    commit(TagsMutationTypes.DEL_VISITED_VIEW, view)
+    commit(TagsMutationTypes.DEL_CACHED_VIEW, view)
+  },
+  [TagsActionTypes.ACTION_DEL_OTHER_VIEW]({ commit }, view: TagView) {
+    commit(TagsMutationTypes.DEL_OTHERS_VISITED_VIEWS, view)
+    commit(TagsMutationTypes.DEL_OTHERS_CACHED_VIEWS, view)
+  },
+  [TagsActionTypes.ACTION_DEL_CACHED_VIEW]({ commit }, view: TagView) {
+    commit(TagsMutationTypes.DEL_CACHED_VIEW, view)
+  },
+  [TagsActionTypes.ACTION_OTHER_VIEWS]({ commit }, view: TagView) {
+    commit(TagsMutationTypes.DEL_OTHERS_VISITED_VIEWS, view)
+    commit(TagsMutationTypes.DEL_OTHERS_CACHED_VIEWS, view)
+  },
+  [TagsActionTypes.ACTION_DEL_ALL_VIEWS]({ commit }) {
+    commit(TagsMutationTypes.DEL_ALL_VISITED_VIEWS)
+    commit(TagsMutationTypes.DEL_ALL_CACHED_VIEWS)
+  },
+  [TagsActionTypes.ACTION_DEL_ALL_CACHED_VIEWS]({ commit }) {
+    commit(TagsMutationTypes.DEL_ALL_CACHED_VIEWS)
+  },
+  [TagsActionTypes.ACTION_UPDATE_VISITED_VIEW]({ commit }, view: TagView) {
+    commit(TagsMutationTypes.UPDATE_VISITED_VIEW, view)
   }
 }

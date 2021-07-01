@@ -58,7 +58,6 @@ export default defineComponent({
     ThemePicker
   },
   setup() {
-
     const store = useStore()
     const state = reactive({
       fixedHeader: store.state.settings.fixedHeader,
