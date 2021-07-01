@@ -13,6 +13,7 @@ import RootStateTypes,{ AllStateTypes } from '@/store/interface'
 // 引入测试子模块
 import user from '@/store/modules/user'
 import settings from '@/store/modules/setting'
+import tagsView from '@/store/modules/tags-view'
 
 export default createStore<RootStateTypes>({
   plugins:import.meta.env.MODE === 'production'? []: [createLogger()],
@@ -22,7 +23,8 @@ export default createStore<RootStateTypes>({
   actions:{},
   modules:{
     user,
-    settings
+    settings,
+    tagsView
   }
 })
 

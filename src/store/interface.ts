@@ -5,6 +5,7 @@
  */
 import UserModuleTypes from '@/store/modules/user/interface' // 用户模块 state 类型引入
 import { SettingsState } from '@/store/modules/setting/state'
+import { TagsViewState } from '@/store/modules/tags-view/state'
 // root 层state 类型定义
 export default interface RootStateTypes{
 
@@ -13,7 +14,8 @@ export default interface RootStateTypes{
 // vuex所有state 类型定义集成
 export interface AllStateTypes extends RootStateTypes{
   user: UserModuleTypes,
-  settings: SettingsState
+  settings: SettingsState,
+  tagsView: TagsViewState
 }
 
 
