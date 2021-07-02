@@ -45,6 +45,9 @@
 
 import { useStore } from '@/store'
 import { defineComponent, computed, reactive, toRefs } from 'vue'
+import { AppActionTypes } from '@/store/modules/app/actions'
+import { useRoute, useRouter } from 'vue-router'
+
 
 import Breadcrumb from '@/components/Breadcrumb/index.vue'
 import Hamburger from '@/components/Hamburger/index.vue'
@@ -60,6 +63,21 @@ export default defineComponent({
     Search
   },
   setup() {
+    const store = useStore()
+    const route = useRoute()
+    const router = useRoute()
+
+    const sidebar = computed(() => {
+      return store.state.app.sidebar
+    })
+
+    const device = computed(() => {
+      return store.state.app.device.toString()
+    })
+
+     const avatar = computed(() => {
+      return store.state.user.avatar
+    })
     return {
 
     }

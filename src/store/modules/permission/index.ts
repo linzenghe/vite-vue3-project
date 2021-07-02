@@ -11,14 +11,13 @@ import { mutations } from './mutations'
 import { actions } from './actions'
 
 
-import {TagsViewState, state} from './state'
+import { PermissionState, state} from './state'
 
-
-const tagsViewModule:Module<TagsViewState,RootStateTypes>={
+const permissionModule:Module<PermissionState,RootStateTypes>={
   namespaced: import.meta.env.MODE !=='production',
   state,
   mutations,
   actions
 }
 
-export default tagsViewModule
+export default permissionModule

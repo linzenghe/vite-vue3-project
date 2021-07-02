@@ -6,9 +6,9 @@
 import Axios,{AxiosInstance} from 'axios'
 import {ElMessage} from 'element-plus'
 import qs from 'qs'
-import store from '@/store'
+import {useStore} from '@/store'
 // import _ from "lodash";
-
+const store = useStore()
 const AUTH_HEADER = 'Authorization'
 
 const service: AxiosInstance = Axios.create({
@@ -19,8 +19,8 @@ const service: AxiosInstance = Axios.create({
 service.interceptors.request.use(
   (config:any)=>{
     // todo：处理请求头拦截
-    if(store.state['userModule'].token){
-      config.headers[AUTH_HEADER] !== store.state['userModules'].token
+    if(store.state.user.token){
+      config.headers[AUTH_HEADER] !== store.state.user.token
     }
 
     if (

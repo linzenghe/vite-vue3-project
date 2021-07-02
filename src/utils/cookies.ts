@@ -3,7 +3,7 @@
  * @Author: ZY
  * @Date: 2020-12-17 16:06:33
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-07-01 14:07:36
+ * @LastEditTime: 2021-07-02 10:01:26
  */
 import Keys from './keys'
 import Cookies from 'js-cookie'
@@ -16,4 +16,11 @@ export const setSize = (size: string) => Cookies.set(Keys.sizeKey, size)
 
 export const getToken = () => Cookies.get(Keys.tokenKey)
 export const setToken = (token: string) => Cookies.set(Keys.tokenKey, token)
-export const removeToken = () => Cookies.remove(Keys.tokenKey)
+export const removeToken = () => {
+  Cookies.remove(Keys.tokenKey)
+  Cookies.remove(Keys.refreshTokenKey)
+}
+
+export const getRefreshToken = () => Cookies.get(Keys.refreshTokenKey)
+export const setRefreshToken = (token: string) => Cookies.set(Keys.refreshTokenKey,size)
+export const removeRefreshToken = () => Cookies.remove(Keys.refreshTokenKey)

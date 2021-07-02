@@ -10,14 +10,14 @@ import RootStateTypes from '@/store/interface'
 import { mutations } from './mutations'
 import { actions } from './actions'
 
-import {TagsViewState, state} from './state'
+import {AppState, state} from './state'
 
 
-const settingsModule:Module<TagsViewState,RootStateTypes>={
+const appModule:Module<AppState,RootStateTypes>={
   namespaced: import.meta.env.MODE !=='production',
   state,
   mutations,
   actions
 }
 
-export default settingsModule
+export default appModule

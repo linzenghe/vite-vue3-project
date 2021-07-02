@@ -14,6 +14,8 @@ import RootStateTypes,{ AllStateTypes } from '@/store/interface'
 import user from '@/store/modules/user'
 import settings from '@/store/modules/setting'
 import tagsView from '@/store/modules/tags-view'
+import app from '@/store/modules/app'
+import permission from '@/store/modules/permission'
 
 export default createStore<RootStateTypes>({
   plugins:import.meta.env.MODE === 'production'? []: [createLogger()],
@@ -24,7 +26,9 @@ export default createStore<RootStateTypes>({
   modules:{
     user,
     settings,
-    tagsView
+    tagsView,
+    app,
+    permission
   }
 })
 
