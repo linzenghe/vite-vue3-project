@@ -62,7 +62,7 @@ export const actions:ActionTree<UserState,RootStateTypes> & Actions = {
     let { username, password } = userInfo
     username = username.trim()
     await loginRequest({ username, password }).then(async(res:any) => {
-      if (res?.code === 0 && res.data.accessToken) {
+      if (res.data.accessToken) {
         setToken(res.data.accessToken)
         commit(UserMutationTypes.SET_TOKEN, res.data.accessToken)
       }
@@ -85,7 +85,7 @@ export const actions:ActionTree<UserState,RootStateTypes> & Actions = {
       throw Error('token is undefined!')
     }
     await userInfoRequest().then((res: any) => {
-      if (res?.code === 0) {
+      if (res.code === 200) {
         commit(UserMutationTypes.SET_ROLES, res.data.roles)
         commit(UserMutationTypes.SET_NAME, res.data.name)
         commit(UserMutationTypes.SET_AVATAR, res.data.avatar)
@@ -107,6 +107,7 @@ export const actions:ActionTree<UserState,RootStateTypes> & Actions = {
     commit(UserMutationTypes.SET_TOKEN, token)
     setToken(token)
     await store.dispatch(UserActionTypes.ACTION_GET_USER_INFO, undefined)
+
     store.dispatch(PermissionActionType.ACTION_SET_ROUTES, state.roles)
     store.state.permission.dynamicRoutes.forEach((item: RouteRecordRaw) => {
       router.addRoute(item)

@@ -33,11 +33,11 @@
 import path from 'path'
 import { isExternal } from '@/utils/validate'
 import { computed, defineComponent,ref } from 'vue'
-import Item from './Item.vue'
+import Item from './BItem.vue'
 import AppLink from './Link.vue'
 
 export default defineComponent({
-  name:'SidebarItem',
+  name:'SidebarPart',
   components:{
     Item,
     AppLink
@@ -60,7 +60,9 @@ export default defineComponent({
     const onlyOneChild = ref()
 
     const hasOneShowingChild = (children:[], parent:object)=>{
+      if(!children) return false
       const showingChildren = children.filter(item => {
+        console.log(item)
         if (item['hidden']) {
           return false
         } else {
@@ -90,7 +92,9 @@ export default defineComponent({
     }
 
     return {
-      onlyOneChild
+      onlyOneChild,
+      hasOneShowingChild,
+      resolvePath
     }
   },
 })

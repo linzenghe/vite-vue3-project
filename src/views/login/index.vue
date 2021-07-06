@@ -67,7 +67,7 @@ import { defineComponent, onMounted, reactive, watch, ref, nextTick, toRefs} fro
 import { isValidUsername } from '@/utils/validate'
 
 import { useRoute, LocationQuery, useRouter } from 'vue-router'
-
+import { UserActionTypes } from '@/store/modules/user/actions'
 import { useStore } from '@/store'
 
 
@@ -154,7 +154,7 @@ export default defineComponent({
         (loginFormRef.value as any).validate(async(valid: boolean) => {
           if (valid) {
             state.loading = true
-            // await store.dispatch(UserActionTypes.ACTION_LOGIN, state.loginForm) // vuex 进行登录校验
+            await store.dispatch('user/' + UserActionTypes.ACTION_LOGIN, state.loginForm) // vuex 进行登录校验
             router.push({
               path: state.redirect || '/',
               query: state.otherQuery

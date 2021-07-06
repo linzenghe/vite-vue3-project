@@ -45,6 +45,7 @@ export const mutations:MutationTree<UserState> & Mutations = {
 
   [UserMutationTypes.SET_ROLES](state: UserState, roles: string[]) {
     state.roles = roles
+    console.log('state.roles',state.roles)
   },
 
   [UserMutationTypes.SET_EMAIL](state: UserState, email: string) {

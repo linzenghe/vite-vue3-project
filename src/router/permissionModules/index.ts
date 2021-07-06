@@ -3,7 +3,7 @@ import Layout from '@/layout/index.vue'
 
 const PermissionRouter:Array<RouteRecordRaw> = [
   {
-    path:'profile',
+    path:'/profile',
     component:Layout,
     redirect: '/profile/index',
     meta: { hidden: true },

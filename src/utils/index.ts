@@ -53,5 +53,3 @@ export const toggleClass = (ele: HTMLElement, className: string) => {
   ele.className = classString
 }
 
-
-

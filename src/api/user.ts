@@ -17,6 +17,7 @@ export function loginRequest (data: object) {
       data: {accessToken: "admin-token"},
       msg:'success'
     }
+    console.log('登录')
     resolve(data)
   })
 }
@@ -44,10 +45,10 @@ export function userInfoRequest () {
         introduction: "I am a super administrator",
         phone: "1234567890",
         roles: ["admin"],
-        0: "admin",
       },
-      msg:'登录成功',
+      msg:'success',
     }
+    console.log('获取用户信息')
     resolve(data)
   })
 }

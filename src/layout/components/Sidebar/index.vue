@@ -17,7 +17,7 @@
         :collapse-transition="false"
         mode="vertical"
       >
-        <sidebar-item v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path" />
+        <sidebar-item v-for="route in routes" :key="route.path" :item="route" :base-path="route.path" />
       </el-menu>
     </el-scrollbar>
   </div>
@@ -29,7 +29,7 @@ import { useStore } from '@/store'
 import { useRoute } from 'vue-router'
 
 import Logo from './Logo.vue'
-import SidebarItem from './SidebarItem.vue'
+import SidebarItem from './SidebarPart.vue'
 import variables from '@/styles/_variables.module.scss'
 
 export default defineComponent({

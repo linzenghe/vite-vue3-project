@@ -139,7 +139,7 @@ export default defineComponent({
       outline: none;
     }
 
-    :v-deep(.right-menu-item){
+    .right-menu-item{
       display: inline-block;
       padding: 0 8px;
       height: 100%;
@@ -150,25 +150,23 @@ export default defineComponent({
       &.hover-effect {
         cursor: pointer;
         transition: background .3s;
-
         &:hover {
           background: rgba(0, 0, 0, .025)
         }
       }
     }
-    :v-deep(.avatar-container){
+    ::v-deep{
+      .avatar-container{
       margin-right: 30px;
       .avatar-wrapper {
         margin-top: 5px;
         position: relative;
-
         .user-avatar {
           cursor: pointer;
           width: 40px;
           height: 40px;
           border-radius: 10px;
         }
-
         .el-icon-caret-bottom {
           cursor: pointer;
           position: absolute;
@@ -178,6 +176,9 @@ export default defineComponent({
         }
       }
     }
+    }
+
+
   }
 }
 </style>

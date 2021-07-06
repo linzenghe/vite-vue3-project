@@ -10,7 +10,7 @@ import {
 } from 'vuex'
 
 import RootStateTypes,{ AllStateTypes } from '@/store/interface'
-// 引入测试子模块
+
 import user from '@/store/modules/user'
 import settings from '@/store/modules/setting'
 import tagsView from '@/store/modules/tags-view'
@@ -38,3 +38,7 @@ export const key: InjectionKey<Store<RootStateTypes>> = Symbol('vue-store')
 export function useStore<T= AllStateTypes>(){
   return baseUseStore<T>(key)
 }
+
+// export function useStore(): Store {
+//   return store as Store
+// }
