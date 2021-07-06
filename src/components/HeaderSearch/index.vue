@@ -1,5 +1,20 @@
-<!--
- * @Dsc: 文件描述
- * @Author: zenghe
- * @Date: 2021-07-01 11:08:18
--->
+<template>
+  <div class="">
+    搜索
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+  name:'handerSearch',
+  setup() {
+    return {
+
+    }
+  },
+})
+</script>
+
+<style lang="scss" scoped>
+</style>

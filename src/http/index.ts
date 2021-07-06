@@ -11,7 +11,7 @@ export class HttpRequest{
   constructor(){
     this.axios = new Interceptors().getInterceptors();
   }
-  request(config:any):AxiosPromise{
+  request(config: any):AxiosPromise{
     return new Promise((resolve,reject)=>{
       this.axios(config).then((res:AxiosResponse)=>{
         resolve(res)

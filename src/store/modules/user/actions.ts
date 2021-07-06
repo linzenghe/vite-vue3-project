@@ -15,6 +15,8 @@ import { UserState,state } from './state'
 import { removeToken, setToken } from '@/utils/cookies'
 import router, { resetRouter } from '@/router'
 import { RouteRecordRaw } from 'vue-router'
+import {loginRequest,userInfoRequest} from '@/api/user'
+
 // action
 export enum UserActionTypes {
   ACTION_LOGIN = 'ACTION_LOGIN',
@@ -59,15 +61,14 @@ export const actions:ActionTree<UserState,RootStateTypes> & Actions = {
   ) {
     let { username, password } = userInfo
     username = username.trim()
-    commit(UserMutationTypes.SET_TOKEN, 'accessToken')
-    // await loginRequest({ username, password }).then(async(res) => {
-    //   if (res?.code === 0 && res.data.accessToken) {
-    //     setToken(res.data.accessToken)
-    //     commit(UserMutationTypes.SET_TOKEN, res.data.accessToken)
-    //   }
-    // }).catch((err) => {
-    //   console.log(err)
-    // })
+    await loginRequest({ username, password }).then(async(res:any) => {
+      if (res?.code === 0 && res.data.accessToken) {
+        setToken(res.data.accessToken)
+        commit(UserMutationTypes.SET_TOKEN, res.data.accessToken)
+      }
+    }).catch(err => {
+      console.log(err)
+    })
   },
 
   [UserActionTypes.ACTION_RESET_TOKEN](
@@ -83,18 +84,18 @@ export const actions:ActionTree<UserState,RootStateTypes> & Actions = {
     if (state.token === '') {
       throw Error('token is undefined!')
     }
-    // await userInfoRequest().then((res) => {
-    //   if (res?.code === 0) {
-    //     commit(UserMutationTypes.SET_ROLES, res.data.roles)
-    //     commit(UserMutationTypes.SET_NAME, res.data.name)
-    //     commit(UserMutationTypes.SET_AVATAR, res.data.avatar)
-    //     commit(UserMutationTypes.SET_INTRODUCTION, res.data.introduction)
-    //     commit(UserMutationTypes.SET_EMAIL, res.data.email)
-    //     return res
-    //   } else {
-    //     throw Error('Verification failed, please Login again.')
-    //   }
-    // })
+    await userInfoRequest().then((res: any) => {
+      if (res?.code === 0) {
+        commit(UserMutationTypes.SET_ROLES, res.data.roles)
+        commit(UserMutationTypes.SET_NAME, res.data.name)
+        commit(UserMutationTypes.SET_AVATAR, res.data.avatar)
+        commit(UserMutationTypes.SET_INTRODUCTION, res.data.introduction)
+        commit(UserMutationTypes.SET_EMAIL, res.data.email)
+        return res
+      } else {
+        throw Error('Verification failed, please Login again.')
+      }
+    })
   },
 
   async [UserActionTypes.ACTION_CHANGE_ROLES](

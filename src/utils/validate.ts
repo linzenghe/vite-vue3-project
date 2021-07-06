@@ -9,3 +9,11 @@
  * @returns {Boolean}
  */
  export const isValidUsername = (str: String):Boolean => ['admin', 'editor'].indexOf(str.trim()) >= 0
+
+ /**
+ * @param {string} path
+ * @returns {Boolean}
+ */
+export function isExternal(path: string) {
+  return /^(https?:|mailto:|tel:)/.test(path)
+}

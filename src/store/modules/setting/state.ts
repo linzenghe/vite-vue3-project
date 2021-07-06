@@ -3,7 +3,7 @@
  * @Author: zenghe
  * @Date: 2021-06-04 10:52:47
  */
-import elementVariables from '@/styles/element-variables.module.scss' // 不支持预编译
+import elementVariables from '@/styles/element-variables.module.scss' // module.scss ,必须为此命名
 import settingConfig from '@/config/setting'
 export interface SettingsState{
   theme: string,

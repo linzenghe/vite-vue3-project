@@ -5,16 +5,14 @@
 -->
 <template>
   <div class="navbar">
-    <!-- <hamburger id="hamburger-container" :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+    <hamburger id="hamburger-container" :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
 
     <breadcrumb id="breadcrumb-container" class="breadcrumb-container" />
 
     <div class="right-menu">
       <template v-if="device!=='mobile'">
-        <search id="header-search" class="right-menu-item" />
-
+        <!-- <search id="header-search" class="right-menu-item" /> -->
         <screenfull id="screenfull" class="right-menu-item hover-effect" />
-
       </template>
 
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
@@ -22,22 +20,24 @@
           <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
           <i class="el-icon-caret-bottom" />
         </div>
-        <el-dropdown-menu slot="dropdown">
-          <router-link to="/profile/index">
-            <el-dropdown-item>个人中心</el-dropdown-item>
-          </router-link>
-          <router-link to="/">
-            <el-dropdown-item>首页</el-dropdown-item>
-          </router-link>
-          <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
-            <el-dropdown-item>Docs</el-dropdown-item>
-          </a>
-          <el-dropdown-item divided @click.native="logout">
-            <span style="display:block;">退出登录</span>
-          </el-dropdown-item>
-        </el-dropdown-menu>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <router-link to="/profile/index">
+              <el-dropdown-item>个人中心</el-dropdown-item>
+            </router-link>
+            <router-link to="/">
+              <el-dropdown-item>首页</el-dropdown-item>
+            </router-link>
+            <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
+              <el-dropdown-item>Docs</el-dropdown-item>
+            </a>
+            <el-dropdown-item divided @click.native="logout">
+              <span style="display:block;">退出登录</span>
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
       </el-dropdown>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -46,8 +46,8 @@
 import { useStore } from '@/store'
 import { defineComponent, computed, reactive, toRefs } from 'vue'
 import { AppActionTypes } from '@/store/modules/app/actions'
+import { UserActionTypes } from '@/store/modules/user/actions'
 import { useRoute, useRouter } from 'vue-router'
-
 
 import Breadcrumb from '@/components/Breadcrumb/index.vue'
 import Hamburger from '@/components/Hamburger/index.vue'
@@ -65,7 +65,7 @@ export default defineComponent({
   setup() {
     const store = useStore()
     const route = useRoute()
-    const router = useRoute()
+    const router = useRouter()
 
     const sidebar = computed(() => {
       return store.state.app.sidebar
@@ -75,11 +75,26 @@ export default defineComponent({
       return store.state.app.device.toString()
     })
 
-     const avatar = computed(() => {
+    const avatar = computed(() => {
       return store.state.user.avatar
     })
-    return {
 
+    const state = reactive({
+      toggleSideBar: () => {
+        store.dispatch('app/' + AppActionTypes.ACTION_TOGGLE_SIDEBAR, false)
+      },
+      logout: () => {
+        store.dispatch('user/' + UserActionTypes.ACTION_LOGIN_OUT)
+        router.push(`/login?redirect=${route.fullPath}`).catch(err => {
+          console.warn(err)
+        })
+      }
+    })
+    return {
+      sidebar,
+      device,
+      avatar,
+      ...toRefs(state)
     }
   },
 })
@@ -124,7 +139,7 @@ export default defineComponent({
       outline: none;
     }
 
-    .right-menu-item {
+    :v-deep(.right-menu-item){
       display: inline-block;
       padding: 0 8px;
       height: 100%;
@@ -141,10 +156,8 @@ export default defineComponent({
         }
       }
     }
-
-    .avatar-container {
+    :v-deep(.avatar-container){
       margin-right: 30px;
-
       .avatar-wrapper {
         margin-top: 5px;
         position: relative;

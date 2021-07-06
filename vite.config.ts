@@ -29,7 +29,7 @@ export default defineConfig({
   css: {
     preprocessorOptions:{
       scss:{
-        additionalData: '@import "./src/styles/_variables.scss";' // 添加全局样式
+        // additionalData: '@import "./src/styles/_variables.module.scss";' // 添加全局样式
       }
     }
   },
@@ -43,8 +43,10 @@ export default defineConfig({
   server: {
     port: 8080, // 设置服务启动端口号
     open: false, // 设置服务启动时是否自动打开浏览器
-    cors: true // 允许跨域
-
+    cors: true, // 允许跨域
+    // hmr: {
+    //   overlay: false // 屏蔽错误
+    // }
     // 设置代理，根据我们项目实际情况配置
     // proxy: {
     //   '/api': {

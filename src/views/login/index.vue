@@ -210,7 +210,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-
+@import '@/styles/_variables.module.scss';
 @supports (-webkit-mask: none) and (not (cater-color: $loginCursorColor)) {
   .login-container .el-input {
     input {
@@ -255,6 +255,7 @@ export default defineComponent({
 </style>
 
 <style lang="scss" scoped>
+@import '@/styles/_variables.module.scss';
 .login-container {
   height: 100%;
   width: 100%;

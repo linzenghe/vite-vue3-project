@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "19355007",
+      "name": "屏幕_全屏",
+      "font_class": "quanping1",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "21926497",
+      "name": "最小化",
+      "font_class": "zuixiaohua",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
       "icon_id": "22129293",
       "name": "eye",
       "font_class": "eye",
