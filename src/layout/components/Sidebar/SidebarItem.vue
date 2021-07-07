@@ -4,18 +4,20 @@
  * @Date: 2021-07-05 14:33:19
 -->
 <template>
-  <div v-if="!item.hidden">
+  <div v-if="!item.meta || !item.meta.hidden">
     <template v-if="hasOneShowingChild(item.children,item) && (!onlyOneChild.children||onlyOneChild.noShowingChildren)&&!item.alwaysShow">
       <app-link v-if="onlyOneChild.meta" :to="resolvePath(onlyOneChild.path)">
         <el-menu-item :index="resolvePath(onlyOneChild.path)" :class="{'submenu-title-noDropdown':!isNest}">
-          <item :icon="onlyOneChild.meta.icon||(item.meta&&item.meta.icon)" :title="onlyOneChild.meta.title" />
+          <i class="iconfont sub-el-icon" :class="onlyOneChild.meta.icon||(item.meta&&item.meta.icon)"></i>
+          <template #title v-if="onlyOneChild.meta.title">{{onlyOneChild.meta.title}}</template>
         </el-menu-item>
       </app-link>
     </template>
 
     <el-submenu v-else ref="subMenu" :index="resolvePath(item.path)" popper-append-to-body>
-      <template slot="title">
-        <item v-if="item.meta" :icon="item.meta && item.meta.icon" :title="item.meta.title" />
+      <template v-if="item.meta">
+        <i class="iconfont sub-el-icon" :class="item.meta && item.meta.icon"></i>
+        <template slot="title" v-if="item.meta.title">{{item.meta.title}}</template>
       </template>
       <sidebar-item
         v-for="child in item.children"
@@ -24,7 +26,7 @@
         :item="child"
         :base-path="resolvePath(child.path)"
         class="nest-menu"
-      />
+      ></sidebar-item>
     </el-submenu>
   </div>
 </template>
@@ -32,14 +34,13 @@
 <script lang="ts">
 import path from 'path'
 import { isExternal } from '@/utils/validate'
-import { computed, defineComponent,ref } from 'vue'
-import Item from './BItem.vue'
+import { defineComponent,ref } from 'vue'
+
 import AppLink from './Link.vue'
 
 export default defineComponent({
-  name:'SidebarPart',
+  name:'SidebarItem',
   components:{
-    Item,
     AppLink
   },
   props:{
@@ -60,10 +61,8 @@ export default defineComponent({
     const onlyOneChild = ref()
 
     const hasOneShowingChild = (children:[], parent:object)=>{
-      if(!children) return false
-      const showingChildren = children.filter(item => {
-        console.log(item)
-        if (item['hidden']) {
+      const showingChildren = children.filter((item: any) => {
+        if (item.meta.hidden) {
           return false
         } else {
           // Temp set(will be used if only has one showing child)
@@ -101,4 +100,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.sub-el-icon {
+  color: currentColor;
+  width: 1em;
+  height: 1em;
+}
 </style>

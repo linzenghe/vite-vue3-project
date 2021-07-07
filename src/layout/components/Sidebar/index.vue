@@ -17,7 +17,7 @@
         :collapse-transition="false"
         mode="vertical"
       >
-        <sidebar-item v-for="route in routes" :key="route.path" :item="route" :base-path="route.path" />
+        <sidebar-item v-for="route in routes" :key="route.path" :item="route" :base-path="route.path"></sidebar-item>
       </el-menu>
     </el-scrollbar>
   </div>
@@ -29,7 +29,7 @@ import { useStore } from '@/store'
 import { useRoute } from 'vue-router'
 
 import Logo from './Logo.vue'
-import SidebarItem from './SidebarPart.vue'
+import SidebarItem from './SidebarItem.vue'
 import variables from '@/styles/_variables.module.scss'
 
 export default defineComponent({
@@ -65,7 +65,7 @@ export default defineComponent({
     })
 
     const isCollapse = computed(() => {
-      return sidebar.value.opened
+      return !sidebar.value.opened
     })
     return {
       sidebar,
@@ -85,7 +85,6 @@ export default defineComponent({
     transition: 0s width ease-in-out, 0s padding-left ease-in-out,
       0s padding-right ease-in-out;
   }
-
   .scrollbar-wrapper {
     overflow-x: hidden !important;
   }

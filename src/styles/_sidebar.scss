@@ -53,7 +53,7 @@
       overflow: hidden;
     }
 
-    .svg-icon {
+    .iconfont {
       margin-right: 16px;
     }
 
@@ -107,7 +107,8 @@
       .el-tooltip {
         padding: 0 !important;
 
-        .svg-icon {
+        .iconfont {
+          background: red;
           margin-left: 20px;
         }
 
@@ -123,7 +124,7 @@
       &>.el-submenu__title {
         padding: 0 !important;
 
-        .svg-icon {
+        .iconfont {
           margin-left: 20px;
         }
 
@@ -188,7 +189,7 @@
 // when menu collapsed
 .el-menu--vertical {
   &>.el-menu {
-    .svg-icon {
+    .iconfont {
       margin-right: 16px;
     }
     .sub-el-icon {

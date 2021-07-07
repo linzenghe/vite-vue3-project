@@ -45,8 +45,8 @@ export const constantRoutes:Array<RouteRecordRaw> = [
         component:()=>import('@/views/dashboard/index.vue'),
         name:'Dashboard',
         meta:{
-          title:'dashboard',
-          icon:'#icondashboard',
+          title:'首页',
+          icon:'icon-shanghu',
           affix:true
         }
       }

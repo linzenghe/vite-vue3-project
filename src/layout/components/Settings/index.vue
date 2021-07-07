@@ -41,7 +41,6 @@
           class="drawer-switch"
         />
       </div>
-
     </div>
   </div>
 </template>

@@ -8,8 +8,10 @@
   "dependencies": {
     "@types/js-cookie": "^2.2.6",
     "@types/nprogress": "^0.2.0",
+    "@vitejs/plugin-vue-jsx": "^1.1.6",
     "@vuedx/typescript-plugin-vue": "^0.7.4",
     "axios": "^0.21.1",
+    "default-passive-events": "^2.0.0",
     "element-plus": "^1.0.2-beta.36",
     "js-cookie": "^2.2.1",
     "path-to-regexp": "^6.2.0",

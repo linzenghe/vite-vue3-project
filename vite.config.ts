@@ -57,5 +57,9 @@ export default defineConfig({
     //     rewrite: (path) => path.replace('/api/', '/')
     //   }
     // },
+  },
+  esbuild: { // jsx 支持
+    jsxFactory: 'h',
+    jsxFragment: 'Fragment'
   }
 });

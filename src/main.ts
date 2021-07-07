@@ -8,7 +8,7 @@ import '@/styles/index.scss' // global css
 import '@/assets/iconfont/iconfont.css' // iconfont
 
 import '@/permission' // 加载权限
-
+import 'default-passive-events'
 // 加载所有插件
 import { loadAllPlugins } from './plugins'
 loadAllPlugins(app)

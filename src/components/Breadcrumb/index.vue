@@ -36,7 +36,7 @@ export default defineComponent({
         let matched = currentRoute.matched.filter(item => item.meta && item.meta.title)
         const first = matched[0]
         if (!state.isDashboard(first)) {
-          matched = [{ path: '/dashboard', meta: { title: 'Dashboard' }} as any].concat(matched)
+          matched = [{ path: '/dashboard', meta: { title: '首页' }} as any].concat(matched)
         }
         state.levelList = matched.filter(item => item.meta && item.meta.title && item.meta.breadcrumb !== false)
       },

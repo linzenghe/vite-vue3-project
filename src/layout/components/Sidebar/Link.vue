@@ -13,7 +13,7 @@
 import { isExternal as external } from '@/utils/validate'
 import { defineComponent,computed } from 'vue'
 export default defineComponent({
-  name:'Name',
+  name:'Link',
   props:{
     to: {
       type: String,
@@ -26,14 +26,14 @@ export default defineComponent({
     })
 
     const type = computed(()=>{
-      if(isExternal){
+      if(isExternal.value){
         return 'a'
       }
       return 'router-link'
     })
 
-    const linkProps = (to:string)=>{
-      if(isExternal){
+    const linkProps = (to: any)=>{
+      if(isExternal.value){
         return {
           href: to,
           target: '_blank',
