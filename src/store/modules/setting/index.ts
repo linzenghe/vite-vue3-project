@@ -15,7 +15,7 @@ import {SettingsState, state} from './state'
 
 
 const settingsModule:Module<SettingsState,RootStateTypes>={
-  namespaced: import.meta.env.MODE !=='production',
+  namespaced: true,
   state,
   mutations,
   actions

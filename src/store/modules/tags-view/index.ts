@@ -15,7 +15,7 @@ import {TagsViewState, state} from './state'
 
 
 const tagsViewModule:Module<TagsViewState,RootStateTypes>={
-  namespaced: import.meta.env.MODE !=='production',
+  namespaced: true,
   state,
   mutations,
   actions

@@ -15,7 +15,7 @@ import {UserState, state} from './state'
 
 
 const userModule:Module<UserState,RootStateTypes>={
-  namespaced: import.meta.env.MODE !=='production',
+  namespaced: true,
   state,
   mutations,
   actions

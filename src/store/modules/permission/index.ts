@@ -14,7 +14,7 @@ import { actions } from './actions'
 import { PermissionState, state} from './state'
 
 const permissionModule:Module<PermissionState,RootStateTypes>={
-  namespaced: import.meta.env.MODE !=='production',
+  namespaced: true,
   state,
   mutations,
   actions
