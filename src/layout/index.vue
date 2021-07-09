@@ -5,7 +5,7 @@
 -->
 <template>
    <div :class="classObj" class="app-wrapper">
-    <div v-if="classObj.mobile==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside" />
+    <div v-if="classObj.mobile && sidebar.opened" class="drawer-bg" @click="handleClickOutside" />
     <sidebar class="sidebar-container" />
     <div :class="{hasTagsView:showTagsView}" class="main-container">
       <div :class="{'fixed-header':fixedHeader}">

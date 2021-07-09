@@ -85,10 +85,10 @@ export default defineComponent({
       isActive: (route: TagView) => {
         return route.path === currentRoute.path
       },
-      isAffix: (tag: TagView) => {
+      isAffix: (tag: any) => { // tofix: tagVie 打包时报错
         return tag.meta && tag.meta.affix
       },
-      refreshSelectedTag: (view: TagView) => {
+      refreshSelectedTag: (view: any) => { // tofix: tagView 打包时报错
         store.dispatch('tagsView/'+TagsActionTypes.ACTION_DEL_CACHED_VIEW, view)
         const { fullPath } = view
         nextTick(() => {
@@ -97,7 +97,7 @@ export default defineComponent({
           })
         })
       },
-      closeSelectedTag: (view: TagView) => {
+      closeSelectedTag: (view: any) => { // tofix: tagView 打包时报错
         store.dispatch('tagsView/'+TagsActionTypes.ACTION_DEL_VIEW, view)
         if (state.isActive(view)) {
           toLastView(store.state.tagsView.visitedViews, view)
@@ -111,7 +111,7 @@ export default defineComponent({
         }
         store.dispatch('tagsView/'+TagsActionTypes.ACTION_DEL_OTHER_VIEW, state.selectedTag as TagView)
       },
-      closeAllTags: (view: TagView) => {
+      closeAllTags: (view: any) => { // tofix: tagView 打包时报错
         store.dispatch('tagsView/'+TagsActionTypes.ACTION_DEL_ALL_VIEWS, undefined)
         if (state.affixTags.some(tag => tag.path === currentRoute.path)) {
           return

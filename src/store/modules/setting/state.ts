@@ -14,7 +14,7 @@ export interface SettingsState{
 }
 
 export const state:SettingsState = {
-  theme: elementVariables.theme,
+  theme: elementVariables.theme || '#1890ff',
   fixedHeader: settingConfig.fixedHeader,
   showSettings: settingConfig.showSettings,
   tagsView: settingConfig.tagsView,

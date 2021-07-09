@@ -3,7 +3,7 @@
  * @Author: ZY
  * @Date: 2020-12-17 16:06:33
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-07-02 10:01:26
+ * @LastEditTime: 2021-07-09 14:29:03
  */
 import Keys from './keys'
 import Cookies from 'js-cookie'
@@ -22,5 +22,5 @@ export const removeToken = () => {
 }
 
 export const getRefreshToken = () => Cookies.get(Keys.refreshTokenKey)
-export const setRefreshToken = (token: string) => Cookies.set(Keys.refreshTokenKey,size)
+export const setRefreshToken = (token: string) => Cookies.set(Keys.refreshTokenKey, token)
 export const removeRefreshToken = () => Cookies.remove(Keys.refreshTokenKey)

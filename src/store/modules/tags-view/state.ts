@@ -11,7 +11,7 @@ export interface TagView extends Partial<RouteLocationNormalized>{
 
 export interface TagsViewState{
   visitedViews: TagView[]
-  cachedViews: (string | undefined)[]
+  cachedViews: any[]
 }
 
 export const state:TagsViewState = {
