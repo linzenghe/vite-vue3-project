@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@types/js-cookie": "^2.2.6",

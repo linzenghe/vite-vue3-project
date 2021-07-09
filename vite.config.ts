@@ -40,7 +40,7 @@ export default defineConfig({
       path: 'path-browserify',
     }
   },
-  base: './', // 设置打包路径
+  base: '/', // 设置打包路径
   server: {
     port: 8080, // 设置服务启动端口号
     open: false, // 设置服务启动时是否自动打开浏览器
