@@ -15,9 +15,9 @@
     </template>
 
     <el-submenu v-else ref="subMenu" :index="resolvePath(item.path)" popper-append-to-body>
-      <template v-if="item.meta">
+      <template #title v-if="item.meta">
         <i class="iconfont sub-el-icon" :class="item.meta && item.meta.icon"></i>
-        <template slot="title" v-if="item.meta.title">{{item.meta.title}}</template>
+        <template v-if="item.meta.title">{{item.meta.title}}</template>
       </template>
       <sidebar-item
         v-for="child in item.children"
@@ -59,8 +59,7 @@ export default defineComponent({
   },
   setup(props) {
     const onlyOneChild = ref()
-
-    const hasOneShowingChild = (children:[], parent:object)=>{
+    const hasOneShowingChild = (children = [], parent:object):boolean=>{
       const showingChildren = children.filter((item: any) => {
         if (item.meta.hidden) {
           return false
@@ -77,7 +76,7 @@ export default defineComponent({
         onlyOneChild.value = { ... parent, path: '', noShowingChildren: true }
         return true
       }
-      return true
+      return false
     }
 
     const resolvePath = (routePath:string)=>{

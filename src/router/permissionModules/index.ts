@@ -24,6 +24,7 @@ const PermissionRouter:Array<RouteRecordRaw> = [
     path:'/component',
     component:Layout,
     redirect: '/component/index',
+    meta:{ title:'组件列表', icon: 'icon-shanghu'},
     children: [
       {
         path: 'index',
@@ -32,7 +33,24 @@ const PermissionRouter:Array<RouteRecordRaw> = [
         meta: {
           title: '组件',
           icon: 'icon-shanghu',
-          noCache: true
+        }
+      },
+      {
+        path: 'index2',
+        component: () => import('@/views/components-demo/index2.vue'),
+        name: 'Component2',
+        meta: {
+          title: '组件2',
+          icon: 'icon-shanghu',
+        }
+      },
+      {
+        path: 'index3',
+        component: () => import('@/views/components-demo/index2.vue'),
+        name: 'Component3',
+        meta: {
+          title: '组件3',
+          icon: 'icon-shanghu',
         }
       }
     ]
