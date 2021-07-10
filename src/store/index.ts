@@ -8,6 +8,7 @@ import { InjectionKey } from 'vue'
 import {
   createStore,Store,useStore as baseUseStore,createLogger
 } from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 
 import RootStateTypes,{ AllStateTypes } from '@/store/interface'
 
@@ -17,8 +18,11 @@ import tagsView from '@/store/modules/tags-view'
 import app from '@/store/modules/app'
 import permission from '@/store/modules/permission'
 
+const plugins = import.meta.env.MODE === 'production' ? [createLogger({})] : []
+plugins.push(createPersistedState({ storage: window.sessionStorage }))
+
 export default createStore<RootStateTypes>({
-  plugins:import.meta.env.MODE === 'production'? []: [createLogger()],
+  plugins: plugins,
   state:{},
   getters:{},
   mutations:{},
