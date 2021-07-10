@@ -72,11 +72,11 @@ export default defineComponent({
     })
 
     watch(() => state.showTagsView, (value) => {
-      store.dispatch('settings/'+ SettingsActionTypes.ACTION_CHANGE_SETTING, { key: 'showTagsView', value })
+      store.dispatch('settings/'+ SettingsActionTypes.ACTION_CHANGE_SETTING, { key: 'tagsView', value })
     })
 
     watch(() => state.showSidebarLogo, (value) => {
-      store.dispatch('settings/'+ SettingsActionTypes.ACTION_CHANGE_SETTING, { key: 'showSidebarLogo', value })
+      store.dispatch('settings/'+ SettingsActionTypes.ACTION_CHANGE_SETTING, { key: 'sidebarLogo', value })
     })
 
     return {

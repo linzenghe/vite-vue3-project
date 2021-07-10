@@ -16,6 +16,6 @@ git commit -m 'deploy'
 
 
 # 如果你要部署在 https://<USERNAME>.github.io
-git push -f git@github.com:linzenghe/linzenghe.github.io.git master
+git push -f git@github.com/linzenghe/linzenghe.github.io.git master
 
 cd -
