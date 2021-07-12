@@ -77,7 +77,7 @@ module.exports = defineConfig({
         ignoreDeclarationMerge: true,
       },
     ],
-
+    'no-unused-vars': 0,
     // 'no-unused-vars': [
     //   'error',
     //   {
@@ -279,15 +279,15 @@ module.exports = defineConfig({
     ],
     'no-unreachable': 2,
     'no-unsafe-finally': 2,
-    'no-unused-vars': [
-      2,
-      {
-        vars: 'all',
-        args: 'none',
-        argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_',
-      },
-    ],
+    // 'no-unused-vars': [
+    //   2,
+    //   {
+    //     vars: 'all',
+    //     args: 'none',
+    //     argsIgnorePattern: '^_',
+    //     varsIgnorePattern: '^_',
+    //   },
+    // ],
     'no-useless-call': 2,
     'no-useless-computed-key': 2,
     'no-useless-constructor': 2,

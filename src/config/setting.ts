@@ -11,7 +11,7 @@ interface SettingConfig{
   tagsView: boolean,
 }
 
-const settingConfig:SettingConfig={
+const settingConfig:SettingConfig = {
   title: 'VITE ELEMENT ADMIN',
   showSettings: true,
   sidebarLogo: true,

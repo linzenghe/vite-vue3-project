@@ -5,7 +5,6 @@
  */
 import { ActionTree, ActionContext } from 'vuex'
 
-
 import { Mutations, PermissionMutationType } from './mutations'
 import RootStateTypes from '@/store/interface'
 import { PermissionState } from './state'
@@ -17,7 +16,6 @@ import { RouteRecordRaw } from 'vue-router'
 export enum PermissionActionType{
   ACTION_SET_ROUTES = 'ACTION_SET_ROUTES'
 }
-
 
 type AugmentedActionContext = {
   commit<K extends keyof Mutations>(
@@ -59,7 +57,7 @@ export interface Actions {
 }
 
 export const actions: ActionTree<PermissionState, RootStateTypes> & Actions = {
-  [PermissionActionType.ACTION_SET_ROUTES](
+  [PermissionActionType.ACTION_SET_ROUTES] (
     { commit }: AugmentedActionContext
     , roles: string[]) {
     let accessedRoutes
@@ -68,6 +66,7 @@ export const actions: ActionTree<PermissionState, RootStateTypes> & Actions = {
     } else {
       accessedRoutes = filterAsyncRoutes(asyncRoutes, roles)
     }
+    console.log('accessedRoutes', accessedRoutes)
     commit(PermissionMutationType.SET_ROUTES, accessedRoutes)
-  }
+  },
 }

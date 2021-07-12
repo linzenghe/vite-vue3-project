@@ -9,7 +9,7 @@ import 'nprogress/nprogress.css'
 import router from '@/router'
 import { RouteLocationNormalized } from 'vue-router'
 
-import store,{ useStore } from '@/store'
+import store, { useStore } from '@/store'
 
 import { UserActionTypes } from './store/modules/user/actions'
 import { PermissionActionType } from './store/modules/permission/actions'
@@ -19,7 +19,7 @@ const whiteList = ['/login', '/auth-redirect']
 
 NProgress.configure({ showSpinner: false })
 
-router.beforeEach(async(to: RouteLocationNormalized, _: RouteLocationNormalized, next: any) => {
+router.beforeEach(async (to: RouteLocationNormalized, _: RouteLocationNormalized, next: any) => {
   // Start progress bar
   NProgress.start()
 
@@ -33,13 +33,14 @@ router.beforeEach(async(to: RouteLocationNormalized, _: RouteLocationNormalized,
       NProgress.done()
     } else {
       // Check whether the user has obtained his permission roles
-      if (store.state['user'].roles.length === 0) {
+      if (!store.state['user'].roles.length) {
         try {
           // Note: roles must be a object array! such as: ['admin'] or ['developer', 'editor']
-          await store.dispatch('user/'+UserActionTypes.ACTION_GET_USER_INFO, undefined)
+          await store.dispatch('user/' + UserActionTypes.ACTION_GET_USER_INFO, undefined)
           const roles = store.state['user'].roles
           // Generate accessible routes map based on role
-          store.dispatch('permission/'+PermissionActionType.ACTION_SET_ROUTES, roles)
+          console.log('roles', roles)
+          store.dispatch('permission/' + PermissionActionType.ACTION_SET_ROUTES, roles)
           // Dynamically add accessible routes
           store.state['permission'].dynamicRoutes.forEach((route:any) => {
             router.addRoute(route)
@@ -49,7 +50,7 @@ router.beforeEach(async(to: RouteLocationNormalized, _: RouteLocationNormalized,
           next({ ...to, replace: true })
         } catch (err) {
           // Remove token and redirect to login page
-          store.dispatch('user/'+UserActionTypes.ACTION_RESET_TOKEN, undefined)
+          store.dispatch('user/' + UserActionTypes.ACTION_RESET_TOKEN, undefined)
           console.log(err)
           ElMessage.error(err || 'Has Error')
           next(`/login?redirect=${to.path}`)
